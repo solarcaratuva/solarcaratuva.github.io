@@ -25,7 +25,7 @@
   * [Extension installation instructions](https://platformio.org/install/ide?install=vscode)
 
 ### Configuration
-* [Guide for getting started using the CLI](https://docs.platformio.org/en/latest/core/quickstart.html)
+* [Getting started with the CLI](https://docs.platformio.org/en/latest/core/quickstart.html)
    * The platform for STM32 is `ststm32`.
    * The evaluation board is `nucleo_f413zh`.
    * The framework is `mbed`.
@@ -36,3 +36,4 @@
 
 ## Helpful References
 * Pin definitions for the evaluation board are in the [Mbed OS source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F413xH/TARGET_NUCLEO_F413ZH).
+* [Full API documentation for Mbed](https://os.mbed.com/docs/mbed-os/v5.15/apis/index.html).
