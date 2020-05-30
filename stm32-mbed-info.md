@@ -21,11 +21,18 @@
   * On MacOS, this can simply be installed using the "platformio" package available in Homebrew. 
   * On Arch Linux, this can simply be installed using the PlatformIO AUR package.
   * For other platforms, please refer to [this guide](https://docs.platformio.org/en/latest/core/installation.html).
-* PlatformIO Extension for [Visual Studio Code](https://code.visualstudio.com/):
+* PlatformIO Extension for [Visual Studio Code](https://code.visualstudio.com/) **(optional)**:
   * [Extension installation instructions](https://platformio.org/install/ide?install=vscode)
-### Configuration ###
-* Every PlatformIO project requires a `platformio.ini` file in the project working directory.
 
+### Configuration ###
+* [Guide for getting started using the CLI](https://docs.platformio.org/en/latest/core/quickstart.html).
+   * The platform for STM32 is `ststm32`
+   * The evaluation board is `nucleo_f413zh`
+   * The framework is `mbed`
+   * If using the RTOS features in the Mbed API, an extra build flag option should be specified in the `platformio.ini` file with a value of `build_flags = -D PIO_FRAMEWORK_MBED_RTOS_PRESENT`
+* The default behavior for PlatformIO with Mbed OS is to recompile the *entire* RTOS every time a project is built with the `PIO_FRAMEWORK_MBED_RTOS_PRESENT` compiler flag. This can lead to extremely long build times.
+   * To prevent PlatformIO from rebuilding the RTOS each time, a [build cache directory can be specified to cache the Mbed binaries](https://docs.platformio.org/en/latest/projectconf/section_platformio.html#build-cache-dir).
+   * The first project build will cache the binaries in the specified location, and will be automatically fetched on subsequent builds.
 
 ## Helpful References ##
 * Pin definitions for the evaluation board are in the [Mbed OS source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F413xH/TARGET_NUCLEO_F413ZH).
