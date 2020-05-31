@@ -35,5 +35,6 @@
    * The first project build will cache the binaries in the specified location, and will be automatically fetched on subsequent builds.
 
 ## Helpful References
-* Pin definitions for the evaluation board are in the [Mbed OS source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F413xH/TARGET_NUCLEO_F413ZH).
+* [Pin definitions for the Nucleo-F413ZH in the Mbed source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F413xH/TARGET_NUCLEO_F413ZH).
+* [Pin diagrams for the Nucleo-F413ZH](https://os.mbed.com/platforms/ST-Nucleo-F413ZH/)
 * [Full API documentation for Mbed](https://os.mbed.com/docs/mbed-os/v5.15/apis/index.html).
