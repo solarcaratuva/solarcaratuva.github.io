@@ -34,6 +34,14 @@
    * To prevent PlatformIO from rebuilding the RTOS each time, a [build cache directory can be specified to cache the Mbed binaries](https://docs.platformio.org/en/latest/projectconf/section_platformio.html#build-cache-dir).
    * The first project build will cache the binaries in the specified location, and the binaries will be automatically fetched on subsequent project builds.
 
+### Serial Terminal
+During development, there will almost certainly be a need to use a serial terminal to view text output or do text input to the device. Several different methods can be used to access the serial terminal, depending on what computer is used:
+* On Linux, either GNU Screen or many other terminal emulators can be used.
+   * The most straightforward one is GNU Screen, which can be installed from almost all repositories. The command to use it to access the terminal is `screen /dev/ttyACM0 9600`, where `/dev/ttyACM0` and `9600` are the default device and baudrate and can be changed. To exit screen, use `Ctrl-A Ctrl-\` or `Ctrl-A` and type `:quit`.
+   * Another good option is picocom, which can be installed from most repositories, including Arch and Debian. To access the serial terminal, use `picocom -b 9600 /dev/ttyACM0`. Again, the settings can be changed from the defaults.
+* On MacOS, `screen` is also available, and is used similarly to the one in Linux. However, the device path will be different.
+* On Windows, the most popular option is [PuTTY](https://www.putty.org/).
+
 ## Helpful References
 * [Pin definitions for the Nucleo-F413ZH in the Mbed source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F413xH/TARGET_NUCLEO_F413ZH).
 * [Pin diagrams for the Nucleo-F413ZH](https://os.mbed.com/platforms/ST-Nucleo-F413ZH).
