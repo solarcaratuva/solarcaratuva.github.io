@@ -37,10 +37,12 @@
 ### Serial Terminal
 During development, there will almost certainly be a need to use a serial terminal to view text output or do text input to the device. Several different methods can be used to access the serial terminal, depending on what computer is used:
 * On Linux, either GNU Screen or many other terminal emulators can be used.
-   * The most straightforward one is GNU Screen, which can be installed from almost all repositories. The command to use it to access the terminal is `screen /dev/ttyACM0 9600`, where `/dev/ttyACM0` and `9600` are the default device and baudrate and can be changed. To exit screen, use `Ctrl-A Ctrl-\` or `Ctrl-A` and type `:quit`.
+   * The most straightforward one is GNU Screen, which can be installed from almost all repositories. The command to use it to access the terminal is `screen /dev/ttyACM0 9600`, where `/dev/ttyACM0` and `9600` are the default device and baudrate and can be changed. To exit screen, use `Ctrl-A \` or `Ctrl-A` and type `:quit`.
    * Another good option is picocom, which can be installed from most repositories, including Arch and Debian. To access the serial terminal, use `picocom -b 9600 /dev/ttyACM0`. Again, the settings can be changed from the defaults.
 * On MacOS, `screen` is also available, and is used similarly to the one in Linux. However, the device path will be different.
 * On Windows, the most popular option is [PuTTY](https://www.putty.org/).
+On Linux and MacOS, the device path can be found using the command `ls /dev/tty*` before and after plugging in the STM32 board. The new device is the STM32.
+On Windows, the COM port used can be found using Device Manager in a similar manner. It will be listed in the "Ports (COM & LPT)" section.
 
 ## Helpful References
 * [Pin definitions for the Nucleo-F413ZH in the Mbed source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F413xH/TARGET_NUCLEO_F413ZH).
