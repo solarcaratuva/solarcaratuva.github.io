@@ -44,6 +44,8 @@ During development, there will almost certainly be a need to use a serial termin
 On Linux and MacOS, the device path can be found using the command `ls /dev/tty*` before and after plugging in the STM32 board. The new device is the STM32.
 On Windows, the COM port used can be found using Device Manager in a similar manner. It will be listed in the "Ports (COM & LPT)" section.
 
+Alternatively, the PlatformIO extension for VSCode has a built-in Serial Monitor that can be accessed from the blue toolbar on the bottom of the IDE. [This link](https://docs.platformio.org/en/latest/integration/ide/vscode.html#ide-vscode-toolbar) shows the toolbar and what each button does. Click on the 8th button from the left (Serial Monitor, looks like a plug) to open up the built-in Serial Terminal.
+
 ## Helpful References
 * [Pin definitions for the Nucleo-F413ZH in the Mbed source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F413xH/TARGET_NUCLEO_F413ZH).
 * [Pin diagrams for the Nucleo-F413ZH](https://os.mbed.com/platforms/ST-Nucleo-F413ZH).
