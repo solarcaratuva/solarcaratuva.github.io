@@ -29,3 +29,4 @@ Use the command `git push` to push your changes to GitHub, which finalizes your 
   
 There are many more complex features that GitHub has, but these commands are the only ones necessary for downloading and uploading files to and from a repository. Feel free to look
 through [this guide](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html) to explore what else GitHub has to offer!
+The `git status` command in particular is useful for tracking changes in both the local and remote repositories, and the files currently being staged.
