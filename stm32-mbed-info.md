@@ -17,7 +17,7 @@
 ## Development Environment
 ### Software
 * PlatformIO Core/CLI
-  * Required for base installation. Using the CLI tool is **highly recommended**.
+  * Required for base installation. Using the CLI tool is **recommended**.
   * On MacOS, this can simply be installed using the "platformio" package available in Homebrew. 
   * On Arch Linux, this can simply be installed using the PlatformIO AUR package.
   * For other platforms, please refer to [this guide](https://docs.platformio.org/en/latest/core/installation.html).
