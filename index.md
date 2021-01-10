@@ -1,5 +1,8 @@
-[Teensy development info](teensy-info)
+# Solar Car Team at UVa
+[Git Quick Start Guide](git-quick-start)
+
+[GitHub](github-tutorial)
 
 [STM32 development info](stm32-mbed-info)
 
-[GitHub Quick Start Guide](github-tutorial)
+[Teensy development info](teensy-info)
