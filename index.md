@@ -1,4 +1,3 @@
-# Solar Car Team at UVa
 [Git Quick Start Guide](git-quick-start)
 
 [GitHub](github-tutorial)

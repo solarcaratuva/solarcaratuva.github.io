@@ -1,5 +1,6 @@
-# PCBv3 Development Environment Setup #
+# Teensy Development Info
 The KiCAD PCB design files and the ECU code are located in the [EmbeddedSystem repository](https://github.com/solarcaratuva/EmbeddedSystem).
+
 ## Code Development ##
 * Install the Arduino IDE.
 * Install the Teensyduino add-on.

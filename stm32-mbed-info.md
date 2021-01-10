@@ -1,4 +1,5 @@
 # STM32 Development Info
+
 ## MCU Info
 * The STM32 board that we are currently evaluating is the [Nucleo-F413ZH](https://www.st.com/en/evaluation-tools/nucleo-f413zh.html).
 * The target STM32 variant is the [STM32F413](https://www.st.com/en/microcontrollers-microprocessors/stm32f413-423.html).
@@ -15,6 +16,7 @@
     * Code written for Mbed can be run on a large number of supported ARM hardware
   
 ## Development Environment
+
 ### Software
 * PlatformIO Core/CLI
   * Required for base installation. Using the CLI tool is **recommended**.
