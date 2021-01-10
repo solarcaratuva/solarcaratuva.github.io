@@ -1,4 +1,4 @@
-remote_theme: pmarsceill/just-the-docs
+remote_theme: kitian616/jekyll-TeXt-theme
 title: Solar Car Team at UVa
 description: Documentation site for the Solar Car Team at UVa
-color_scheme: dark
+text_skin: dark
