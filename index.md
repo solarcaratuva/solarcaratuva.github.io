@@ -1,7 +1,1 @@
-[Git Quick Start Guide](git-quick-start)
-
-[GitHub](github-tutorial)
-
-[STM32 development info](stm32-mbed-info)
-
-[Teensy development info](teensy-info)
+This site contains guides and other resources related to project development and the tools used by the team.
