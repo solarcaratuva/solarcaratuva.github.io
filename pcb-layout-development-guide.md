@@ -2,6 +2,8 @@
 ## Overview
 This guide walks through how to start working on a layout for a PCB that already has a layout file setup (a file with the .kicad_pcb extention). A very useful part of Git's design is using branches. Branches allow you to work on your own 'copy' of the master code and still retain the master code. When you make a new branch, it initially starts on your local machine and then you can push the branch to the remote server (GitHub, Cadlab, etc.). This allows multiple versions of the code/kicad files to exist at the same time for anyone to see.
 
+IMPORTANT NOTE: This was originally for Motor board, so anywhere where there is a specific project, switch that to whatever you are trying to work on if it's not Motor.
+
 ## Directions
 
 1. Clone the repository with the PCB files (If you already have the folder for the project on your local machine, skip this step)
