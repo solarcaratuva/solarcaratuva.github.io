@@ -4,7 +4,7 @@ parent: PCB
 
 # Template PCB Documentation
 
-This document describes the contents of the Template board. For documentation on the recommended pin usage of the STM32 MCU, see the [pins docs](pcb/pins.md).
+This document describes the contents of the Template board. For documentation on the recommended pin usage of the STM32 MCU, see the [pins docs](pins.md).
 
 The Template board is a template PCB starter for all the teams to use.
 
