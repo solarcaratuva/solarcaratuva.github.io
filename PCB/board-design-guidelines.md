@@ -1,3 +1,8 @@
+---
+nav_order: 2
+parent: PCB
+---
+
 # PCB Layout Guidelines
 This section contains useful guidelines to generally pay attention to when laying out PCBs.
 

@@ -1,3 +1,7 @@
+---
+nav_order: 2
+parent: Git
+---
 
 # GitHub
 This section contains information on how to install the necessary software for working with GitHub.

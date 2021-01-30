@@ -1,3 +1,8 @@
+---
+nav_order: 1
+parent: Deprecated
+---
+
 # Teensy Development Info
 The KiCAD PCB design files and the ECU code are located in the [EmbeddedSystem repository](https://github.com/solarcaratuva/EmbeddedSystem).
 

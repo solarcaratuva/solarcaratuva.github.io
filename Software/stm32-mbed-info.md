@@ -1,3 +1,8 @@
+---
+nav_order: 2
+parent: Software
+---
+
 # STM32 Development Info
 
 ## MCU Info

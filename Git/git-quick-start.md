@@ -1,3 +1,8 @@
+---
+nav_order: 1
+parent: Git
+---
+
 # Git Quick Start Guide
 
 ## Working with Repositories
