@@ -1,5 +1,5 @@
 ---
-nav_order: 2
+nav_order: 1
 parent: Software
 ---
 
@@ -7,8 +7,8 @@ parent: Software
 
 ## MCU Info
 * The STM32 board that we are currently evaluating is the [Nucleo-F413ZH](https://www.st.com/en/evaluation-tools/nucleo-f413zh.html).
-* The target STM32 variant is the [STM32F413](https://www.st.com/en/microcontrollers-microprocessors/stm32f413-423.html).
-* The STM32F413 was chosen for its 3 built-in CAN 2.0B controllers and the STM32F4 line being popular with many top solar car teams.
+* The target STM32 variant used in our PCBs is the [STM32G473CE](https://www.st.com/en/microcontrollers-microprocessors/stm32g473ce.html).
+* The STM32G473CE was chosen for its 3 built-in CAN 2.0B controllers and its small pin count package size (48 pins).
 * There are many other variants in [the STM32 family](https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html); if needed, low power or dual core versions of the STM32 such as the [STM32H745](https://www.st.com/en/microcontrollers-microprocessors/stm32h745-755.html) could also be considered.
 
 ## RTOS Info
@@ -23,16 +23,18 @@ parent: Software
 ## Development Environment
 
 ### Software
-* PlatformIO Core/CLI
-  * Required for base installation. Using the CLI tool is **recommended**.
+* PlatformIO Extension for [Visual Studio Code](https://code.visualstudio.com) **(reccommended)**
+  * [Extension installation instructions](https://platformio.org/install/ide?install=vscode)
+  * This will automatically install the PlatformIO Core and CLI, so skip the next bullet. 
+* PlatformIO Core/CLI if not using VSCode **(NOT recommended)**
+  * Required for base installation. Using the CLI tool by itself is **NOT recommended**, as it will be installed by the PlatformIO VSCode Extension.
   * On MacOS, this can simply be installed using the "platformio" package available in Homebrew. 
   * On Arch Linux, this can simply be installed using the PlatformIO AUR package.
   * For other platforms, please refer to [this guide](https://docs.platformio.org/en/latest/core/installation.html).
-* PlatformIO Extension for [Visual Studio Code](https://code.visualstudio.com) **(optional)**
-  * [Extension installation instructions](https://platformio.org/install/ide?install=vscode)
 
 ### Configuration
-* [Getting started with the CLI](https://docs.platformio.org/en/latest/core/quickstart.html)
+* [Getting started with the IDE](https://docs.platformio.org/en/latest/integration/ide/vscode.html#quick-start)
+   * Or, if you want to go the **NOT reccommended** route, [getting started with the CLI](https://docs.platformio.org/en/latest/core/quickstart.html)
    * The platform for STM32 is `ststm32`.
    * The evaluation board is `nucleo_f413zh`.
    * The framework is `mbed`.
@@ -54,6 +56,7 @@ On Windows, the COM port used can be found using Device Manager in a similar man
 Alternatively, the PlatformIO extension for VSCode has a built-in Serial Monitor that can be accessed from the blue toolbar on the bottom of the IDE. [This link](https://docs.platformio.org/en/latest/integration/ide/vscode.html#ide-vscode-toolbar) shows the toolbar and what each button does. Click on the 8th button from the left (Serial Monitor, looks like a plug) to open up the built-in Serial Terminal.
 
 ## Helpful References
+* [Pin definitions for the Nucleo-G474RE in the Mbed source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32G4/TARGET_STM32G474xE/TARGET_NUCLEO_G474RE)
 * [Pin definitions for the Nucleo-F413ZH in the Mbed source](https://github.com/ARMmbed/mbed-os/tree/master/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F413xH/TARGET_NUCLEO_F413ZH).
 * [Pin diagrams for the Nucleo-F413ZH](https://os.mbed.com/platforms/ST-Nucleo-F413ZH).
-* [Full API documentation for Mbed](https://os.mbed.com/docs/mbed-os/v5.15/apis/index.html).
+* [Full API documentation for Mbed](https://os.mbed.com/docs/mbed-os/latest/apis/index.html).
