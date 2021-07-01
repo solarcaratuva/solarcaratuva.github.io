@@ -20,11 +20,11 @@ Because PlatformIO does not fully support the STM32G473 MCU, we have to add a co
 
 1. Locate the following folder (either using the following command in Git Bash or clicking through the File Explorer).
     1. `$ start ~/.platformio/packages/tool-openocd/scripts/board`
-1. Make a copy of the file `st_nucleo_f4.cfg`, and name it `st_nucleo_g4.cfg`.
+1. Make a copy of the file in the same folder `st_nucleo_f4.cfg`, and name it `st_nucleo_g4.cfg`.
 1. Open the new file (`st_nucleo_g4.cfg`) and edit the 3rd line of code (skip the comments) to `g4` instead of `f4`.
     1. Edit it from `source [find target/stm32f4x.cfg]` to `source [find target/stm32g4x.cfg]`
 
-The new file `st_nucleo_g4.cfg` contents should now be (ignoring the comments):
+The new file `st_nucleo_g4.cfg`, located at `~/.platformio/packages/tool-openocd/scripts/board/st_nucleo_g4.cfg`, should now contain (ignoring the comments):
 
 ```
 source [find interface/stlink.cfg]
