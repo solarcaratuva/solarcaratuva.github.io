@@ -10,24 +10,33 @@ Follow the [installation instructions](https://platformio.org/install/ide?instal
 
 ## Importing the Template Project
 
-In the following instructions, replace all instances of "Team" with a subteam board name (PowerAux, Motor, ECU, or Solar).
+1. Clone the [TemplateCode repository](https://github.com/solarcaratuva/TemplateCode) to your local machine.
+    1. `$ git clone https://github.com/solarcaratuva/TemplateCode.git`
+    1. `$ cd TemplateCode`
 
-1. Duplicate the [TemplateCode repository](https://github.com/solarcaratuva/TemplateCode) following the instructions [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository#mirroring-a-repository). 
-    1. `$ git clone --bare https://github.com/solarcaratuva/TemplateCode.git`
-    1. `$ cd TemplateCode.git`
-    1. Create a new repository in the [UVA Solar Car organization](https://github.com/solarcaratuva), named TeamCode.
-    1. `$ git push --mirror https://github.com/solarcaratuva/TeamCode.git`
-    1. `$ cd ..`
-    1. `$ rm -rf TemplateCode.git`
-1. Clone the new repository (TeamCode) to your local machine.
-    1. `$ git clone https://github.com/solarcaratuva/TeamCode.git`
-    1. `$ cd TeamCode`
-1. Add the TemplateCode repository as a remote of the new TeamCode repository following the instructions [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork).
-    1. `$ git remote add upstream https://github.com/solarcaratuva/TemplateCode.git`
-1. Now to sync the new TeamCode repository with changes in the TemplateCode repository, simply fetch and merge the remote called upstream by following the instructions [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
-    1. `$ git fetch upstream`
-    1. `$ git checkout master`
-    1. `$ git merge upstream/master`
+## Adding Support for the Custom Target to PlatformIO
+
+Because PlatformIO does not fully support the STM32G473 MCU, we have to add a configuration file to be able to upload any code to our MCU (note that this is not neccesary to upload code to dev boards):
+
+1. Locate the following folder (either using the following command in Git Bash or clicking through the File Explorer).
+    1. `$ start ~/.platformio/packages/tool-openocd/scripts/board`
+1. Make a copy of the file in the same folder `st_nucleo_f4.cfg`, and name it `st_nucleo_g4.cfg`.
+1. Open the new file (`st_nucleo_g4.cfg`) and edit the 3rd line of code (skip the comments) to `g4` instead of `f4`.
+    1. Edit it from `source [find target/stm32f4x.cfg]` to `source [find target/stm32g4x.cfg]`
+
+The new file `st_nucleo_g4.cfg`, located at `~/.platformio/packages/tool-openocd/scripts/board/st_nucleo_g4.cfg`, should now contain (ignoring the comments):
+
+```
+source [find interface/stlink.cfg]
+
+transport select hla_swd
+
+source [find target/stm32g4x.cfg]
+
+reset_config srst_only
+```
+
+And now you should be able to upload code to our custom boards by following the nest instructions.
 
 ## Running the Code
 
@@ -35,27 +44,29 @@ All tasks neccessary to run the code and see its output can be performed using e
 
 ### Environments
 
-Before running any tasks, the idea of PlatformIO's [configuration environments](https://docs.platformio.org/en/latest/projectconf/section_env.html) must be explained. Taking a look at the `platformio.ini` file at the root of the TemplateCode repository shows the configuration environments defined for the project (the many `[env:NAME]` sections of the file).
+Before running any tasks, the idea of PlatformIO's [configuration environments](https://docs.platformio.org/en/latest/projectconf/section_env.html) must be explained. Taking a look at the `platformio.ini` file at the root of the TemplateCode repository shows the configuration environments defined for the project (the many `[env:NAME]` sections of the file). There should be at least one for each of our four boards (ECU, Motor, Power/Aux, Solar).
 
-One of them, for example is the `uva_solar_car` environment, which uses the `uva_solar_car` board, a custom target that specifies the setup of our board, including specifications of the MCU used, hardware around the MCU, and a few settings that define the behavior of the MCU (for example, what frequency to run the system clock at).
+One of them, for example is the `ecu` environment (note: there is both a `[ecu]` section and a `[env:ecu]` section, the environment is defined by the latter), which extends from both the `uva_solar_car` and `ecu` sections. The `uva_solar_car` section uses the `uva_solar_car` board, a custom target that specifies the setup of our board, including specifications of the MCU used, hardware around the MCU, and a few settings that define the behavior of the MCU (for example, what frequency to run the system clock at).
 
-The `uva_solar_car` environment is what we will use when uploading code to the boards we have developed. Until the boards are printed and populated, however, we will need to run our code on one of STM's development boards, which is what the other environments are for. The exact MCU used for compiling and uploading doesn't affect the code we write using Mbed OS, since the hardware details will be abstracted away. These configuration environments in PlatformIO is how we tell Mbed OS which hardware to build for.
+Each of the individual team environments (`ecu`, `motor`, `power_aux`, and `solar`) are what we will use when uploading code to the boards we have developed. Until the boards are printed and populated, however, we will need to run our code on one of STM's development boards, which is what the `nucleo_...` environments are for. The exact MCU used for compiling and uploading doesn't affect the code we write using Mbed OS, since the hardware details will be abstracted away. These configuration environments in PlatformIO is how we tell Mbed OS which hardware to build for.
+
+The final environment, `native`, is only used to run unit tests locally on your computer or on continuous integration platforms, and not on any embedded hardware.
 
 ### Building
 
 Building compiles and links all project source files into an binary executable file that the MCU will understand and be able to run. However, it does not upload this executable, but instead stores it locally on your PC. This is useful for checking and correcting compile time issues, and does not require any hardware to be connected to your PC.
 
-To build the project using the CLI, simply run the [`pio run` command](https://docs.platformio.org/en/latest/core/userguide/cmd_run.html) and specify the environment to run using the [`-e` or `--environment` option](https://docs.platformio.org/en/latest/core/userguide/cmd_run.html#cmdoption-pio-run-e). For example, to build the `uva_solar_car` environment, run `pio run -e uva_solar_car`.
+To build the project using the CLI, simply run the [`pio run` command](https://docs.platformio.org/en/latest/core/userguide/cmd_run.html) and specify the environment to run using the [`-e` or `--environment` option](https://docs.platformio.org/en/latest/core/userguide/cmd_run.html#cmdoption-pio-run-e). For example, to build the `ecu` environment, run `pio run -e ecu`.
 
-Alternatively, if using the Project Tasks GUI, click the dropdown for the environment and under the `General` tab, click `Build`. For example, to build the `uva_solar_car` environment, click `env:uva_solar_car` > `General` > `Build`.
+Alternatively, if using the Project Tasks GUI, click the dropdown for the environment and under the `General` tab, click `Build`. For example, to build the `ecu` environment, click `env:ecu` > `General` > `Build`.
 
 ### Uploading
 
 Uploading performs a build then uploads the generated executable to the MCU. This requires the MCU to be connected to your PC via the STLink using a USB cable. After the upload is complete, this task will also restart the MCU to ensure the newly uploaded program starts execution at the beginning of the program.
 
-To upload the project using the CLI, simply run the `pio run` command and specify the target as `upload` using the [`-t` or `--target` option](https://docs.platformio.org/en/latest/core/userguide/cmd_run.html#cmdoption-pio-run-t). Make sure to also specify the environment. For example, to upload the `uva_solar_car` environment, run `pio run -e uva_solar_car -t upload`.
+To upload the project using the CLI, simply run the `pio run` command and specify the target as `upload` using the [`-t` or `--target` option](https://docs.platformio.org/en/latest/core/userguide/cmd_run.html#cmdoption-pio-run-t). Make sure to also specify the environment. For example, to upload the `ecu` environment, run `pio run -e ecu -t upload`.
 
-Alternatively, if using the Project Tasks GUI, click the dropdown for the environment and under the `General` tab, click `Upload`. For example, to upload the `uva_solar_car` environment, click `env:uva_solar_car` > `General` > `Upload`.
+Alternatively, if using the Project Tasks GUI, click the dropdown for the environment and under the `General` tab, click `Upload`. For example, to upload the `ecu` environment, click `env:ecu` > `General` > `Upload`.
 
 ### Using the Serial Monitor
 
@@ -63,7 +74,7 @@ Now your program is running on the MCU, but how do you know if it is working as 
 
 To open the Serial Monitor using the CLI, simply run the [`pio device monitor` command](https://docs.platformio.org/en/latest/core/userguide/device/cmd_monitor.html).
 
-Alternatively, if using the Project Tasks GUI, click the dropdown for the environment and under the `General` tab, click `Monitor`. For example, to monitor the `uva_solar_car` environment, click `env:uva_solar_car` > `General` > `Monitor`.
+Alternatively, if using the Project Tasks GUI, click the dropdown for the environment and under the `General` tab, click `Monitor`. For example, to monitor the `ecu` environment, click `env:ecu` > `General` > `Monitor`.
 
 ## Concluding Remarks
 
