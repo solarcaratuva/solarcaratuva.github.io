@@ -26,6 +26,8 @@ One of them, for example is the `ecu` environment (note: there is both a `[ecu]`
 
 Each of the individual team environments (`ecu`, `motor`, `power_aux`, and `solar`) are what we will use when uploading code to the boards we have developed. Until the boards are printed and populated, however, we will need to run our code on one of STM's development boards, which is what the `nucleo_...` environments are for. The exact MCU used for compiling and uploading doesn't affect the code we write using Mbed OS, since the hardware details will be abstracted away. These configuration environments in PlatformIO is how we tell Mbed OS which hardware to build for.
 
+The final environment, `native`, is only used to run unit tests locally on your computer or on continuous integration platforms, and not on any embedded hardware.
+
 ### Building
 
 Building compiles and links all project source files into an binary executable file that the MCU will understand and be able to run. However, it does not upload this executable, but instead stores it locally on your PC. This is useful for checking and correcting compile time issues, and does not require any hardware to be connected to your PC.
