@@ -14,6 +14,30 @@ Follow the [installation instructions](https://platformio.org/install/ide?instal
     1. `$ git clone https://github.com/solarcaratuva/TemplateCode.git`
     1. `$ cd TemplateCode`
 
+## Adding Support for the Custom Target to PlatformIO
+
+Because PlatformIO does not fully support the STM32G473 MCU, we have to add a configuration file to be able to upload any code to our MCU (note that this is not neccesary to upload code to dev boards):
+
+1. Locate the following folder (either using the following command in Git Bash or clicking through the File Explorer).
+    1. `$ start ~/.platformio/packages/tool-openocd/scripts/board`
+1. Make a copy of the file `st_nucleo_f4.cfg`, and name it `st_nucleo_g4.cfg`.
+1. Open the new file (`st_nucleo_g4.cfg`) and edit the 3rd line of code (skip the comments) to `g4` instead of `f4`.
+    1. Edit it from `source [find target/stm32f4x.cfg]` to `source [find target/stm32g4x.cfg]`
+
+The new file `st_nucleo_g4.cfg` contents should now be (ignoring the comments):
+
+```
+source [find interface/stlink.cfg]
+
+transport select hla_swd
+
+source [find target/stm32g4x.cfg]
+
+reset_config srst_only
+```
+
+And now you should be able to upload code to our custom boards by following the nest instructions.
+
 ## Running the Code
 
 All tasks neccessary to run the code and see its output can be performed using either the [Project Tasks GUI](https://docs.platformio.org/en/latest/integration/ide/vscode.html#project-tasks) or the [PlatformIO Core (CLI)](https://docs.platformio.org/en/latest/integration/ide/vscode.html#platformio-core-cli).
