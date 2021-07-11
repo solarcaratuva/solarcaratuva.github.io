@@ -51,6 +51,13 @@ parent: Software
 - Time Durations
     - Use `std::chrono` durations for all time durations (as Mbed has deprecated the use of integer or float types for all time durations)
     - e.g. `std::chrono::milliseconds`
+- References vs Pointers
+    - Whenever possible, use references
+    - Otherwise, use pointers
+    - Reasons why you would need to use pointers include:
+        - The variable may be null
+        - The memory location of the variable may need to change (i.e. the pointer changes)
+        - The initial memory location of the variable is unknown during initialization
 
 ## Formatting
 
