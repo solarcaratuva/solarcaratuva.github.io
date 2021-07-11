@@ -65,7 +65,25 @@ parent: Software
 
 ## Dependency Injection
 
-TODO
+Dependency injection is a technique used to ensure our code can be unit tested with mocks of all dependencies used by our code. It fundamentally relies on all our code receiving all of its dependencies externally rather than instantiating any dependencies internally.
+
+### What is a Dependency?
+
+Anything that can be described as a “has a” relationship between classes. For example, all Mbed classes we use are dependencies of the classes we write, so Mbed’s `CAN` class is a dependency of our `CANInterface` class.
+
+### How are Dependencies Mocked?
+
+FakeIt is used to create an instance of a mock of our Mbed dependencies. Then that mock instance is passed to the unit of code (usually a class) we are testing. This tricks our code to think all Mbed dependencies are real Mbed implementations when they are actually all mocks with little or no actual functionality implemented.
+
+### How this Affects how we Write our Code
+
+All dependencies (specifically Mbed objects) we use in any of our libraries must be instantiated outside of our libraries and simply passed in on initialization. For classes we write, this means the constructor must take in all Mbed dependencies as inputs and store references or pointers to these inputs instead of simply initializing these dependencies in the constructor.
+
+The actual initialization of all Mbed dependencies must be done either in main.cpp (for release builds) or in testing code via the mocking API (for testing). In either case, the initialized dependencies will be passed in to our initialization or constructors to fill the pointers/references.
+
+This works because of polymorphism: the mock instances are effectively concrete subclasses of the abstract Mbed mock classes we write.
+
+TODO: add an example
 
 ## Coding Standard
 
