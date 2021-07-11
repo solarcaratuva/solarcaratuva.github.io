@@ -20,7 +20,3 @@ The platform we use for continuous integration is [CircleCI](https://circleci.co
 ## Code Coverage
 
 The platform we use to host our code coverage results is [Coveralls](https://coveralls.io/).
-
-## Coding Standard
-
-TODO

@@ -58,4 +58,8 @@ parent: Software
 
 ## Dependency Injection
 
+TODO
 
+## Coding Standard
+
+TODO
