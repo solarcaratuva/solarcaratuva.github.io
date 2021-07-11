@@ -69,7 +69,7 @@ Dependency injection is a technique used to ensure our code can be unit tested w
 
 ### What is a Dependency?
 
-Anything that can be described as a “has a” relationship between classes. For example, all Mbed classes we use are dependencies of the classes we write, so Mbed’s `CAN` class is a dependency of our `CANInterface` class.
+Anything that can be described as a "uses a" relationship between classes. For example, all Mbed classes we use are dependencies of the classes we write, so Mbed’s `CAN` class is a dependency of our `CANInterface` class, because `CANInterface` "uses a" `CAN` object.
 
 ### How are Dependencies Mocked?
 
