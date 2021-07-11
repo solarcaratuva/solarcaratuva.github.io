@@ -19,17 +19,38 @@ parent: Software
     - Refactor once code is repeated 3 or more times
 - KISS (Keep it simple, stupid)
     - Limit the amount of code in each function (40-50 lines max)
-- YAGNI (You Aren’t Gonna Need It)
+- YAGNI (You Aren't Gonna Need It)
     - Only implement what you need now
 
 ## Import Rules
 
 - Angle brackets `<>` for external libraries (C/C++ standard libraries, Mbed, Unity, FakeIt)
     - e.g. `#include <mbed.h>` 
-- Double quotes `“”` for user/project libraries and headers (files we write)
+- Double quotes `""` for user/project libraries and headers (files we write)
     - e.g. `#include "CANInterface.h"`
 
 ## Variable Types
+
+- Numeric Types
+    - Avoid using 64-bit types, as this will put unnecessary strain on our MCU
+        - This includes `double`, `int64_t`, and `uint64_t`
+    - Avoid sending floating-point types over CAN
+    - For integers, don't use the ambiguous types `int`, `unsigned int`, `short`, `long`, or `long long`
+        - Instead use `int8_t`, `uint8_t`, `int16_t`, `int32_t`
+    - Literals
+        - For floating-point numbers, use the `f` suffix
+            - e.g. `float x = 1.5f;`
+            - Leaving out the `f` suffix will automatically use a double, putting unnecessary strain on the MCU
+        - For integer numbers, use `L` for `int32_t`, `u` for `uint16_t` and `uint8_t`, `uL` for `uint32_t`, and no suffix for `int16_t` and `int8_t`
+            - e.g. `uint16_t x = 123u;`
+- Null Type
+    - For pointers, use `nullptr`
+        - This is the C++ equivalent of the `NULL` macro in C, but comes with explicit type checking
+    - For `char` types, use `'\0'`
+    - Never use the literal `0` for null pointers
+- Time Durations
+    - Use `std::chrono` durations for all time durations (as Mbed has deprecated the use of integer or float types for all time durations)
+    - e.g. `std::chrono::milliseconds`
 
 ## Formatting
 
