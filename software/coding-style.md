@@ -54,6 +54,8 @@ parent: Software
 
 ## Formatting
 
+- Use four spaces for indentation instead of the tab character `'\t'` (this can be changed via a setting in your IDE or text editor)
+
 ## Dependency Injection
 
 
