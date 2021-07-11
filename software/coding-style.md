@@ -83,7 +83,46 @@ The actual initialization of all Mbed dependencies must be done either in main.c
 
 This works because of polymorphism: the mock instances are effectively concrete subclasses of the abstract Mbed mock classes we write.
 
-TODO: add an example
+### Example
+
+Below is the definition of our `CANInterface` class. 
+
+```
+class CANInterface
+{
+public:
+    CANInterface(CAN &c, CANParser &cp, Thread &tx_thread, Thread &rx_thread, DigitalOut *stby=nullptr, std::chrono::milliseconds can_period = 1s);
+    void startCANTransmission(void);
+
+private:
+    void rx_handler(void);
+    void tx_handler(void);
+
+    CAN &can;
+    CANParser &can_parser;
+    DigitalOut *standby;
+
+    Thread &tx_thread;
+    Thread &rx_thread;
+
+    std::chrono::milliseconds tx_period;
+};
+```
+
+Notice how the constructor accepts all Mbed dependencies used by the `CANInterface` class as reference or pointer inputs. For example the `CAN` object is taken as a reference, while the `DigitalOut` object is taken as a pointer. The distinction between whether a dependency should be a reference and a pointer is that optional dependencies should be pointers (which can be null), while required dependencies should be references (which cannot be null). So in our example, the `DigitalOut` object is optional, while all other Mbed dependencies are required.
+
+Note that when using references for class data fields, they must be instantiated *before* the start of the constructor. This can be done as shown in the implementation of our `CANInterface` class constructor, using [C++ constructor initialization lists](https://en.cppreference.com/w/cpp/language/constructor). 
+
+```
+CANInterface::CANInterface(CAN &c, CANParser &cp, Thread &tx_thrd, Thread &rx_thrd, DigitalOut *stby, std::chrono::milliseconds tx_prd) : can(c), can_parser(cp), tx_thread(rx_thrd), rx_thread(tx_thrd), tx_period(tx_prd)
+{
+    if(stby) 
+    { 
+        standby = stby;
+        *standby = 0;   // active low
+    }
+}
+```
 
 ## Coding Standard
 
