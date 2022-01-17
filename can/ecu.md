@@ -11,8 +11,8 @@ parent: CAN
 | -------------------- | --------- | ----- | ----- | ---------- |
 | throttle             | uint16_t  | 0-15  |       | 5ms        |
 | regen                | uint16_t  | 16-31 |       |            |
-| reverse_en           | bool      | 32    |       |            |
-| forward_en           | bool      | 33    |       |            |
+| forward_en           | bool      | 32    |       |            |
+| reverse_en           | bool      | 33    |       |            |
 | cruise_control_en    | bool      | 34    |       |            |
 | cruise_control_speed | uint8_t   | 35-43 |       |            |
 | motor_on             | bool      | 44    |       |            |
