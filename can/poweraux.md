@@ -4,4 +4,3 @@ parent: CAN
 ---
 
 ## PowerAux (Node ID #3)
-### PowerAuxExampleStruct (Message ID #3)

@@ -13,28 +13,28 @@ parent: CAN
 
 ### SolarVoltage (Message ID #5)
 
-| Field          | Type    | Bits | Range | Units |
-| -------------- | ------- | ---- | ----- | ----- |
-| panel1_voltage | int16_t | 0-15 |       |       |
-| panel2_voltage | int16_t | 0-15 |       |       |
-| panel3_voltage | int16_t | 0-15 |       |       |
-| panel4_voltage | int16_t | 0-15 |       |       |
+| Field          | Type    | Bits  | Range | Units |
+| -------------- | ------- | ----- | ----- | ----- |
+| panel1_voltage | int16_t | 0-15  |       |       |
+| panel2_voltage | int16_t | 16-31 |       |       |
+| panel3_voltage | int16_t | 32-63 |       |       |
+| panel4_voltage | int16_t | 64-79 |       |       |
 
 ### SolarTemp (Message ID #6)
 
-| Field       | Type    | Bits | Range | Units |
-| ----------- | ------- | ---- | ----- | ----- |
-| panel1_temp | int16_t | 0-15 |       |       |
-| panel2_temp | int16_t | 0-15 |       |       |
-| panel3_temp | int16_t | 0-15 |       |       |
-| panel4_temp | int16_t | 0-15 |       |       |
+| Field       | Type    | Bits  | Range | Units |
+| ----------- | ------- | ----- | ----- | ----- |
+| panel1_temp | int16_t | 0-15  |       |       |
+| panel2_temp | int16_t | 16-31 |       |       |
+| panel3_temp | int16_t | 32-63 |       |       |
+| panel4_temp | int16_t | 64-79 |       |       |
 
 ### SolarPhoto (Message ID #7)
 
-| Field        | Type    | Bits | Range | Units |
-| ------------ | ------- | ---- | ----- | ----- |
-| panel1_photo | int16_t | 0-15 |       |       |
-| panel2_photo | int16_t | 0-15 |       |       |
-| panel3_photo | int16_t | 0-15 |       |       |
-| panel4_photo | int16_t | 0-15 |       |       |
+| Field        | Type    | Bits  | Range | Units |
+| ------------ | ------- | ----- | ----- | ----- |
+| panel1_photo | int16_t | 0-15  |       |       |
+| panel2_photo | int16_t | 16-31 |       |       |
+| panel3_photo | int16_t | 32-63 |       |       |
+| panel4_photo | int16_t | 64-79 |       |       |
 
