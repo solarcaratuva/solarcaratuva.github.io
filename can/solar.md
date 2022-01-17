@@ -1,0 +1,39 @@
+---
+nav_order: 3
+parent: CAN
+
+## Solar (Node ID #4)
+
+### SolarCurrent (Message ID #4)
+
+| Field         | Type    | Bits | Range | Units |
+| ------------- | ------- | ---- | ----- | ----- |
+| total_current | int16_t | 0-15 |       |       |
+
+### SolarVoltage (Message ID #5)
+
+| Field          | Type    | Bits | Range | Units |
+| -------------- | ------- | ---- | ----- | ----- |
+| panel1_voltage | int16_t | 0-15 |       |       |
+| panel2_voltage | int16_t | 0-15 |       |       |
+| panel3_voltage | int16_t | 0-15 |       |       |
+| panel4_voltage | int16_t | 0-15 |       |       |
+
+### SolarTemp (Message ID #6)
+
+| Field       | Type    | Bits | Range | Units |
+| ----------- | ------- | ---- | ----- | ----- |
+| panel1_temp | int16_t | 0-15 |       |       |
+| panel2_temp | int16_t | 0-15 |       |       |
+| panel3_temp | int16_t | 0-15 |       |       |
+| panel4_temp | int16_t | 0-15 |       |       |
+
+### SolarPhoto (Message ID #7)
+
+| Field        | Type    | Bits | Range | Units |
+| ------------ | ------- | ---- | ----- | ----- |
+| panel1_photo | int16_t | 0-15 |       |       |
+| panel2_photo | int16_t | 0-15 |       |       |
+| panel3_photo | int16_t | 0-15 |       |       |
+| panel4_photo | int16_t | 0-15 |       |       |
+
