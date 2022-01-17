@@ -1,6 +1,7 @@
 ---
 nav_order: 3
 parent: CAN
+---
 
 ## Solar (Node ID #4)
 
