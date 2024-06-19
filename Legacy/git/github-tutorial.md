@@ -1,6 +1,7 @@
 ---
 nav_order: 2
 parent: Git
+has_children: false
 ---
 
 # GitHub

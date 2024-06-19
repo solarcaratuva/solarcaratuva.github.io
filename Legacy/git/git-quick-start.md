@@ -1,6 +1,7 @@
 ---
 nav_order: 1
 parent: Git
+has_children: false
 ---
 
 # Git Quick Start Guide
