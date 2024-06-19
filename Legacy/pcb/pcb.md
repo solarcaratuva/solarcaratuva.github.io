@@ -2,6 +2,7 @@
 title: PCB
 nav_order: 2
 has_children: true
+parent: Legacy
 ---
 
 # PCB
