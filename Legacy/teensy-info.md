@@ -1,6 +1,7 @@
 ---
 nav_order: 1
-parent: Deprecated
+parent: Legacy
+has_children: false
 ---
 
 # Teensy Development Info

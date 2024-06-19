@@ -1,6 +1,7 @@
 ---
 nav_order: 2
-parent: Deprecated
+parent: Legacy
+has_children: false
 ---
 
 # Importing Template Repositories
