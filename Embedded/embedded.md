@@ -11,6 +11,6 @@ The Embedded subteam designs, implements, and tests the embedded code that monit
 **[Team GitHub Page Link](https://github.com/solarcaratuva)**
 
 ## How to find info on this wiki
-- Finding links to projects - go to the appropriate entry under *Embedded* in the sidebar menu dropdown
-- Project specific info (like how to compile Rivanna3) - go to that project's GitHub page and view the `README`
+- Finding links to projects - go to the appropriate entry under `Embedded` in the sidebar menu dropdown
+- Project specific info (like how to compile Rivanna3) - go to that project's GitHub page (linked in this Wiki) and view the `README`
 - Other documentation - see the Embedded `Documentation` page, another subteam's documentation page, or use the *Search Box*

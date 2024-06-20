@@ -5,7 +5,9 @@ parent: Embedded
 has_children: false
 ---
 
-These projects are separate from the Embedded Codebase, and are not uploaded to the car. These projects support the team in ways such as debugging. They are linked below.
+# Supporting Projects
+
+These projects are separate from the Embedded Codebase, and are not uploaded to the car. These projects support the team in various ways, such as debugging. They are linked below.
 
 ## Projects
 
@@ -30,9 +32,9 @@ TODO: mostly done, will add soon
 [CAN Messages Definitions](https://github.com/solarcaratuva/CAN-messages)
 This repo contains the `*.dbc` definitions of our various CAN messages.
 
-[MbedOS fork](https://github.com/solarcaratuva/mbed-os)
-This is a fork of the official ARM MbedOS version we use
+[Team Wiki (this website)](https://github.com/solarcaratuva/solarcaratuva.github.io)
+The markdown source code for this wiki is found here. 
 
 ## Telemetry Legacy Codebase
+[Repo Link](https://github.com/solarcaratuva/Telemetry) 
 This is the legacy JavaScript-based codebase used by the Telemetry subteam from 2019-2024.
-[Link](https://github.com/solarcaratuva/Telemetry)
