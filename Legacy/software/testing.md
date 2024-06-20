@@ -1,6 +1,8 @@
 ---
 nav_order: 4
 parent: Software
+grand_parent: Legacy
+has_children: false
 ---
 
 # Testing

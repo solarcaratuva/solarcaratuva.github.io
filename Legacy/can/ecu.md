@@ -1,6 +1,8 @@
 ---
 nav_order: 3
 parent: CAN
+grand_parent: Legacy
+has_children: false
 ---
 
 ## ECU (Node ID #1)

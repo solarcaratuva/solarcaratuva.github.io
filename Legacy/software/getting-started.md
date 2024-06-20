@@ -1,6 +1,8 @@
 ---
 nav_order: 2
 parent: Software
+grand_parent: Legacy
+has_children: false
 ---
 
 # Getting Started

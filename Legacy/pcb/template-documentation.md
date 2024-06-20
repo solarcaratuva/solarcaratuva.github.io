@@ -1,5 +1,7 @@
 ---
 parent: PCB
+grand_parent: Legacy
+has_children: false
 ---
 
 # Template PCB Documentation

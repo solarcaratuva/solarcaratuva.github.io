@@ -1,6 +1,8 @@
 ---
 nav_order: 1
 parent: Software
+grand_parent: Legacy
+has_children: false
 ---
 
 # STM32 Development Info
