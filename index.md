@@ -1,3 +1,9 @@
+---
+title: Wiki Home
+nav_order: 0
+has_children: false
+---
+
 # Solar Car Wiki
 
 Solar Car Team at UVA is an experiential learning program of the School of Engineering where students obtain hands-on interdisciplinary experience in the design, manufacturing, testing, fundraising, exhibition, and racing of solar cars. Students from all areas of study are welcome to join us!
