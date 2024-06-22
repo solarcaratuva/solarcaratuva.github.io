@@ -1,6 +1,6 @@
 ---
 title: Documentation
-nav_order: 4
+nav_order: 99
 parent: Embedded
 has_children: false
 ---
@@ -21,3 +21,4 @@ TODO: I intend to make some powerpoints for onboarding. They will be posted here
 ## External References
 - [ST-Tools commands (like st-flash) and documentation](https://github.com/stlink-org/stlink)
 - [MbedOS official documentation](https://os.mbed.com/docs/mbed-os/v6.16/introduction/index.html)
+- [Common Shell Commands](https://www.geeksforgeeks.org/basic-shell-commands-in-linux/)

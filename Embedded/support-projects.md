@@ -16,8 +16,8 @@ This program is for logging, filtering, and analyzing recorded or live CAN messa
 
 TODO: this project is being reworked in Fall 2024
 
-[CAN Message Generator]() <br>
-TODO: will add soon
+[CAN Message Generator](https://github.com/solarcaratuva/CAN-Message-Generator) <br>
+This program generates mock CAN messages for debugging.
 
 [Hardware-in-loop testing](https://github.com/solarcaratuva/HiL_Testing) <br>
 This project is the code for a test server used to thoroughly test the Embedded Codebase. The testing server emulates all the inputs into the physical testing board, and analyzes the outputs to determine if the code is working correctly. 
