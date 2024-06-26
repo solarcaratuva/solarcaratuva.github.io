@@ -17,8 +17,8 @@ TODO: I intend to make some powerpoints for onboarding. They will be posted here
 
 ## External Guides
 - [Git Guide](https://github.com/git-guides) and [Git Video Explanation](https://youtu.be/HkdAHXoRtos?si=yp5dmcoSZ1O8sAkU)
+- [Common Shell Commands](https://www.geeksforgeeks.org/basic-shell-commands-in-linux/)
 
 ## External References
 - [ST-Tools commands (like st-flash) and documentation](https://github.com/stlink-org/stlink)
 - [MbedOS official documentation](https://os.mbed.com/docs/mbed-os/v6.16/introduction/index.html)
-- [Common Shell Commands](https://www.geeksforgeeks.org/basic-shell-commands-in-linux/)
