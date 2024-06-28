@@ -22,7 +22,7 @@ The team is grouped into three teams and their subteams: mechanical, electrical,
 
 The Electrical Team:
 - [Embedded](https://solarcaratuva.github.io/Embedded/embedded.html)
-- Hardware Integration (HI)
+- [Hardware Integration (HI)](https://solarcaratuva.github.io/HI/hi.html)
 - Power
 - Solar
 - Telemetry
