@@ -1,6 +1,6 @@
 # Solar Car Wiki Source Code
 
-This repo contains the source code from which the wiki is generated.
+This repository contains the source code from which the wiki is generated.
 
 **[https://solarcaratuva.github.io/](https://solarcaratuva.github.io/)**
 
@@ -9,11 +9,11 @@ This repo contains the source code from which the wiki is generated.
 Before making your first changes, please contact the Embedded Lead. Provide your GitHub username, so you can be given editing rights. <br>
 
 - A folder will be created for your subteam. Put ALL your content in this folder; this is to ensure that the source code for this wiki remains organized. 
-    - It is recommended to put any external resources, like PDFs, in the team Google Drive folder and link to them in your pages, rather than putting those files in this repo.
+    - It is recommended to put any external resources, like PDFs, in the team Google Drive folder and link to them in your pages, rather than putting those files in this repository.
 - A blank landing page will also be created for your subteam, all pages you create should have this page as their 'parent' (described below). 
 
 ## Prerequisites 
-**If you already understand Git** then it is recommended to clone this repo and edit it locally. You can use VSCode to edit / add content, and use the `Markdown Preview Enhanced` extension to view the formatted Markdown before committing it.
+**If you already understand Git** then it is recommended to clone this repository and edit it locally. You can use VSCode to edit / add content, and use the `Markdown Preview Enhanced` extension to view the formatted Markdown before committing it.
 
 **If you don't understand or know about Git** then it is recommended that you add and edit content entirely through the GitHub website. [Here is a guide](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files).
 
