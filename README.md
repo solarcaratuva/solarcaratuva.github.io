@@ -40,7 +40,7 @@ Every page must have these attributes.
 Besides that, the rest of the page is described in standard markdown that will be visible. <br>
 For help writing with markdown, see:
 1. [This guide](https://www.markdownguide.org/)
-2. [Documentation for the Jekyll theme this wiki is made from](https://just-the-docs.github.io/just-the-docs/)
+2. [Documentation for the Jekyll theme this wiki is made from](https://just-the-docs.com/)
 3. ChatGPT
 
 It is recommended that you use the *Embedded* section of the wiki as a guide. You can view the source markdown code that makes the pages and compare it to how the actual pages look on the website.
