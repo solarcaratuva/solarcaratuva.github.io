@@ -2,3 +2,5 @@ title: Solar Car at UVA
 description: Documentation site for the Solar Car Team at UVA
 remote_theme: pmarsceill/just-the-docs
 color_scheme: light
+footer:
+  custom: footer_custom
