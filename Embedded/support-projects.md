@@ -24,10 +24,8 @@ This project is the code for a test server used to thoroughly test the Embedded 
 
 TODO: this project will be worked on in Fall 2024
 
-[Onboarding Installer Script]() <br>
+[Onboarding Installer Script](https://github.com/solarcaratuva/Onboarding_Installer) <br>
 This script downloads, installs, and configures the necessary software stack to develop, compile, and upload our embedded code to the car.
-
-TODO: mostly done, will add soon
 
 [CAN Messages Definitions](https://github.com/solarcaratuva/CAN-messages) <br>
 This repo contains the `*.dbc` definitions of our various CAN messages.

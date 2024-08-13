@@ -13,7 +13,7 @@ For guidance on compiling, uploading, monitoring and other development informati
 
 ## Current Design Cycle
 
-**Rivanna3** (2024-present)    TODO: add link
+[**Rivanna3** (2024-present)](https://github.com/solarcaratuva/Rivanna3)
 
 
 ## Previous Design Cycles
