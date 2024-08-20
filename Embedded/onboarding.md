@@ -33,10 +33,15 @@ For the first month or so, PowerPoints will be presented at the start of the Sun
 
 ## Independent Research
 
+New members should research the basics of C++ and Python if they are unfamiliar with these programming languages. Here are some helpful resources:
+- [C++ Basics](https://www.w3schools.com/cpp/default.asp)
+- [Python Basics](https://www.w3schools.com/python/)
+
 New members should ask questions to other team members, their team lead (Colby), or the internet when they are confused. Asking questions is an essential part of learning. <br>
-New members are also recommended to skim through the Embedded Codebase outside of meetings, and try to understand how it works, doing light research as they feel necessary. <br>
-These are not formal expectations, but still part of the learning process.  
+New members are also recommended to skim through the Embedded Codebase outside of meetings, and try to understand how it works, doing light research as they feel necessary. 
 
 ## Onboarding Project
 
-TODO
+- The project will be a short exercise where new members can interact with the Embedded codebase.
+- Every individual should complete their own project (but can ask others for help); this will probably be the only time you work on a project completely independently while on the team.
+- Specific directions / goals will be given in person. 
