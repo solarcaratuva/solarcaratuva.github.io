@@ -18,11 +18,12 @@ This page will serve as the hub for onboarding, similar to how this wiki is a hu
 
 ## Downloading Software
 
-1. Go to the [Onboarding Script](https://github.com/solarcaratuva/Onboarding_Installer) and follow the instructions to start the script. This program will download and configure most of the required software. 
-2. While that is happening, read through the `Readme` for the [Rivanna3 project](https://github.com/solarcaratuva/Rivanna3). This is our embedded codebase for this year.
+1. Create a GitHub account and Discord account, if you don't already have one.
+2. Go to the [Onboarding Script](https://github.com/solarcaratuva/Onboarding_Installer) and follow the instructions to start the script. This program will download and configure most of the required software. 
+3. While that is happening, read through the `Readme` for the [Rivanna3 project](https://github.com/solarcaratuva/Rivanna3). This is our embedded codebase for this year.
     - this project is our biggest project by A LOT, so it is normal to feel overwhelmed by its size and complexity 
     - your goal right now should be to read the entire `Readme`, then get a feel for where stuff is in the codebase
-3. Once the Onboarding Script has finished, see if any of the commands have failed
+4. Once the Onboarding Script has finished, see if any of the commands have failed
     - if none have failed: you have completed this section
     - if some have failed: run the onboarding script again. There are checks in it to ensure software isn't installed twice by accident.
     - if some have failed and you ran the script twice already: you will need to manually install / configure the failed steps. Ask for help if needed.
