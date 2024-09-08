@@ -7,8 +7,8 @@ has_children: false
 # Documentation
 
 ## PowerPoints
-
-TODO: I intend to make some powerpoints for onboarding. They will be posted here after.
+- [Opening Meeting](https://drive.google.com/file/d/1GV1Ph86vunCsnsBcIUX04oiol8AQcEKi/view?usp=sharing)
+- [Software Stack](https://drive.google.com/file/d/1a6h2YoyHt1VBVpDAnqnV-vvIAEQiqU0E/view?usp=sharing) - covers Git, VS Code, Docker, ST-Flash, WSL, WSL USB, Shell Commands, Compilation, Uploading, Serial Monitoring
 
 ## Datasheets
 - [STM32G473 MCU](https://drive.google.com/file/d/1JZ41cACIANuE3BXey5xjTEt2_om3fG5V/view?usp=sharing)
