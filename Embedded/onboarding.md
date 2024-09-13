@@ -53,6 +53,6 @@ New members are also recommended to skim through the Embedded Codebase outside o
 3. Open `DriverBoard/src/main.cpp` and go to the `signalFlashHandler` function
 4. Read the instructions in the comments, and implement the described logic
 5. When you have reached a milestone:
-    a. compile *Rivanna3* to ensure your code in syntactically correct for C++ (compilation warnings are fine, compilation failure is not)
-    b. commit and push the changes to your branch
+    - compile *Rivanna3* to ensure your code in syntactically correct for C++ (compilation warnings are fine, compilation failure is not)
+    - commit and push the changes to your branch
 6. When you are done or have questions, talk to Colby or an Onboarding TA
