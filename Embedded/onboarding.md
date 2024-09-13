@@ -46,3 +46,13 @@ New members are also recommended to skim through the Embedded Codebase outside o
 - The project will be a short exercise where new members can interact with the Embedded codebase.
 - Every individual should complete their own project (but can ask others for help); this will probably be the only time you work on a project completely independently while on the team.
 - Specific directions / goals will be given in person. 
+
+**Directions**
+1. Open the *Rivanna3* project on your computer, switch branches to the `onboarding_project` branch (`git checkout onboarding_project`)
+2. make a new branch from this called `onboarding_project_yourname` (`git branch onboarding_project_yourname`) and switch to it using git checkout
+3. Open `DriverBoard/src/main.cpp` and go to the `signalFlashHandler` function
+4. Read the instructions in the comments, and implement the described logic
+5. When you have reached a milestone:
+    a. compile *Rivanna3* to ensure your code in syntactically correct for C++ (compilation warnings are fine, compilation failure is not)
+    b. commit and push the changes to your branch
+6. When you are done or have questions, talk to Colby or an Onboarding TA
