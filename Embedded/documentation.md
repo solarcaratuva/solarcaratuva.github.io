@@ -9,6 +9,7 @@ has_children: false
 ## PowerPoints
 - [Opening Meeting](https://drive.google.com/file/d/1GV1Ph86vunCsnsBcIUX04oiol8AQcEKi/view?usp=sharing)
 - [Software Stack](https://drive.google.com/file/d/1a6h2YoyHt1VBVpDAnqnV-vvIAEQiqU0E/view?usp=sharing) - covers Git, VS Code, Docker, ST-Flash, WSL, WSL USB, Shell Commands, Compilation, Uploading, Serial Monitoring
+- [C++ and MbedOS Part 1](https://drive.google.com/file/d/1xnGwHI2RhwMqYtqOCBTmmfYA7BLYZoP-/view?usp=sharing) - covers data types, operators, control structures, constants, functions, structs, defines, header files, GPIO pins, printing to the terminal, threads
 
 ## Datasheets
 - [STM32G473 MCU](https://drive.google.com/file/d/1JZ41cACIANuE3BXey5xjTEt2_om3fG5V/view?usp=sharing)
