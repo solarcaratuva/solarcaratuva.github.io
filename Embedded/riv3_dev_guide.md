@@ -1,5 +1,5 @@
 ---
-title: Rivanna3 Dev Guide
+title: Rivanna3 Development Guide
 nav_order: 2
 parent: Embedded
 has_children: false
