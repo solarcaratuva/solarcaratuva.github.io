@@ -1,7 +1,7 @@
 ---
 title: Best GIT Practices for Hardware Integration
 nav_order: 2
-parent: HI
+parent: Hardware Integration
 has_children: false
 ---
 #  Git Introduction
