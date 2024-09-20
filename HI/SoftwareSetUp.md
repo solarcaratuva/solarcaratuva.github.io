@@ -1,5 +1,5 @@
 ---
-title: Necessary Software Needed
+title: Onboarding Software Set Up
 nav_order: 3
 parent: Hardware Integration
 has_children: false
