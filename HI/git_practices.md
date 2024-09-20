@@ -13,7 +13,7 @@ Git can be hard to navigate. This page has been created to help HI members to ut
 # Git Commands To Use
 Included below is a table of git commands to leverage. It will be a great reference and tool to be able to use not only for Solar Car but also for any future endeavours. Please bookmark this.
 
-https://drive.google.com/file/d/1uMw3iIvGw6jcLmkmXuhwhxy82nauLgIG/view?usp=sharing
+(https://drive.google.com/file/d/1uMw3iIvGw6jcLmkmXuhwhxy82nauLgIG/view?usp=sharing)
 
 
 # Best Git Practices
@@ -22,7 +22,7 @@ https://drive.google.com/file/d/1uMw3iIvGw6jcLmkmXuhwhxy82nauLgIG/view?usp=shari
 Utilizing good git practices is monumental in allowing for the team to work efficiently. It may seem like a lot but it will become more easy with practice. Below there is a link graciously provided by an Software Development Essentials textbook spearheaded by Professor McBurney from UVA. Please read the link in its entirety to be most prepared for PCB designs.
 
 
-https://sde-coursepack.github.io/modules/construction/Best-Practices/
+(https://sde-coursepack.github.io/modules/construction/Best-Practices/)
 
 
 
