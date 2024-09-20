@@ -23,7 +23,9 @@ After all of these steps have been completed, you are ready to start exploring C
 ## Cadlab
 Before we getted started on CadLab features, make sure your github and cadlab account are linked as seen above. Thie sill the only way that you will be able to work in the Solar Car CadLab repository. Once these two are linked, go ahead and reach out to the HI lead for next steps and permission to join the repository. Once you have access, make sure to bookmark the page since it will be accessed fairly often. 
 
-**Once you have access, make srue to bookmark the page since you will be accessing it often**
+**CadLab downloading**
+
+For the next couple steps, make sure to have CadLab and Git installed on your local device. First you would go into the Solar Car CadLab repository and access the specific directory. For the 2024-2025 academic, please access 
 **set up the cadlab repository onto your own device**
 **concept of branching in CadLab**
 
