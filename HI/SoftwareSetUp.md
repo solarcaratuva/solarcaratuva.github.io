@@ -35,8 +35,20 @@ Before we getted started on CadLab features, make sure your github and cadlab ac
 
 To continuously access CadLab seamlessly, please bookmark the Solar Car at UVA Cadlab main directory page. This will make it easier to go between repositories. 
 
-For the next couple steps, make sure to have CadLab and Git installed on your local device. First you would go into the Solar Car CadLab repository and access the specific directory. For the 2024-2025 academic, please access Rivanna_3. 
+For the next couple steps, make sure to have CadLab bookmarked and Git installed on your local device. First you would go into the Solar Car CadLab repository and access the specific directory. For the 2024-2025 academic, please access Rivanna_3. 
 **set up the cadlab repository onto your own device**
+### Setting up the CadLab Repository onto Local Desktop
+
+1. Open the desired repository directory. 
+2. Copy the Git URL in the top left of the page as seen in the image below. When copying over the Git Url, make sure to access the right branch to be copied over. We will discuss this in detail later on this page.  
+![image](/solarcaratuva.github.io/HI/images/Screenshot%202024-09-21%20at%204.06.02 PM.png)
+
+3. On your local desktop, create a folder to house all Solar Car files to ease the transition and keep everything clean. 
+        mkdir Solar_Car_UVA
+4. Cd into this folder and paste the copied Git Url into your terminal. This will popuate all of the files in that repository onto you local desktop. 
+
+To streamline the concept of branching, the following section explores how branching will be initiaited and maintained below. 
+
 **concept of branching in CadLab**
 
 
