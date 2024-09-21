@@ -1,6 +1,6 @@
 ---
 title: Rivanna3 Development Guide
-nav_order: 2
+nav_order: 3
 parent: Embedded
 has_children: false
 ---
