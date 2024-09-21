@@ -15,6 +15,12 @@ Included below is a table of git commands to leverage. It will be a great refere
 
 (https://drive.google.com/file/d/1uMw3iIvGw6jcLmkmXuhwhxy82nauLgIG/view?usp=sharing)
 
+## Submodules Handling
+Since our CadLab repository structure for PCB boards and its respective schematics involve submodules, the following command is extremely important to run each time you work on making change: 
+
+        git submodule update  --remote
+
+This command allows for you to update your submodule to its latest version to deploy and utilize in your designs. For more information on the CadLab repository structure. 
 
 # Best Git Practices
 
@@ -31,4 +37,6 @@ Utilizing good git practices is monumental in allowing for the team to work effi
 
 
 We would like to express credit and thanks to Professor McBurney for providing resources on git. We would like to acknowledge that everything from the online textbook is leveraged for educational purposes.
+
+https://www.geeksforgeeks.org/how-to-update-git-submodule-to-latest-commit-on-origin/
 
