@@ -16,14 +16,17 @@ When downloading the software, make sure to choose the configuration that works 
 Visual Studio Code will provide an avenue to handle all git for the CadLab repository. It also allows for you to see the raw breakdown of the files that are edited in KiCad. Visual Studio Code will also act as an avenue to handle any merge conflicts that arise when updating the branches. To avoid this as much as possible, make sure to pull any new changes onto your branch and make sure the submodule is updated to the most recent version. More information on this will be included on the Git practices subpage. 
 
 ## Git
-**Git set-up in terminal**
 Git is a version control platform that must be downloaded onto your local terminal for both MacOS, Windows and Linux users. We will be setting this up to help move files and changes between everyone's remote deaktop. This allows everyone to be able to contribute to the HI subteam efforts from anywhere (as long as you follow the Git expectations for HI).
 ### MacOS Users
 For MacBook users, there are a couple of possible options to explore. Choose the option which makes you most comfortable. The first option is to download XCode to leverage the command line tool arguments provided and the added benefit of git implementation involved. The other option which allows you to utilize git from your terminal, involves installing homebrew. The command to install home brew is located at this [link](https://git-scm.com/download/mac). All you would need to do is copy and paste the command into your terminal.
 Before you can utilize the beauty of CadLab and KiCad, you must link your GitHub account to a CadLab account. The steps are stated below.
+### Windows Users
+
 
 ### Github to CadLab Connection
-
+1. Go to the CadLab [website](cadlab.io). 
+2. Set up an account with CadLab by signing in with GitHub. This will reroute you to GitHub. 
+3. Follow the steps that GitHub needs to verify the account and provide the necessary permissions to CadLab for both to be synced together. Your GitHub and CadLab accounts are officially connected!!
 
 After all of these steps have been completed, you are ready to start exploring CadLab and KiCad.
 
