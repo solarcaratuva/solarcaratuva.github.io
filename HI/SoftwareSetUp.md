@@ -17,7 +17,9 @@ Visual Studio Code will provide an avenue to handle all git for the CadLab repos
 
 ## Git
 **Git set-up in terminal**
-
+Git is a version control platform that must be downloaded onto your local terminal for both MacOS, Windows and Linux users. We will be setting this up to help move files and changes between everyone's remote deaktop. This allows everyone to be able to contribute to the HI subteam efforts from anywhere (as long as you follow the Git expectations for HI).
+### MacOS Users
+For MacBook users, there are a couple of possible options to explore. Choose the option which makes you most comfortable. The first option is to download XCode to leverage the command line tool arguments provided and the added benefit of git implementation involved. The other option which allows you to utilize git from your terminal, involves installing homebrew. The command to install home brew is located at this [link](https://git-scm.com/download/mac). All you would need to do is copy and paste the command into your terminal.
 Before you can utilize the beauty of CadLab and KiCad, you must link your GitHub account to a CadLab account. The steps are stated below.
 
 ### Github to CadLab Connection
