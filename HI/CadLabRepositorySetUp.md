@@ -12,7 +12,8 @@ Submodules are leveraged where they are imported libraries that we can set a poi
 
 All libraries used in the PCB design layout will be included as submodules. In our PCB implementation, there will be 3 submodule folders corresponding similarly with the Rivanna 3 CadLab repo. The three submodule libraries will be titled the Telemetry, STM and Power Board. The Telemetry submodules will contain all library needs for the telemetry board. The same thing will occur for the power board. The STM submodule will contain library items that are need for all boards across the car. This submodule contains generalized parts that are used everywhere. 
 
-For more information on submodules, follow this [link](https://www.youtube.com/watch?v=8Z4Cmhji_FQ)
+For more information on submodules, follow this [link](https://www.youtube.com/watch?v=8Z4Cmhji_FQ).
+ [Official Documentation for Submodules and Git](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 
 ## Rivanna 3 Repo Structure
