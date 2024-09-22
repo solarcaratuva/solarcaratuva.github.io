@@ -54,5 +54,8 @@ To streamline the concept of branching, the following section explores how branc
 
 ## KiCad
 Once CadLab has been set-up and the files from the repository are pulled to your local device, make sure to have a folder structure to be able to organize all the files you will be needing to keep track of in Solar Car. It is better to set this up earlier than later to maintain the maximum efficiency. 
+
+### Downloading KiCad
+
 **download steps**
 **How to open a file**
