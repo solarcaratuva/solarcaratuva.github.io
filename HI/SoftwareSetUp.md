@@ -35,13 +35,14 @@ Before we getted started on CadLab features, make sure your github and cadlab ac
 
 To continuously access CadLab seamlessly, please bookmark the Solar Car at UVA Cadlab main directory page. This will make it easier to go between repositories. 
 
-For the next couple steps, make sure to have CadLab bookmarked and Git installed on your local device. First you would go into the Solar Car CadLab repository and access the specific directory. For the 2024-2025 academic, please access Rivanna_3. 
-**set up the cadlab repository onto your own device**
+For the next couple steps, make sure to have CadLab bookmarked and Git installed on your local device. First you would go into the Solar Car CadLab repository and access the specific directory. For the 2024-2025 academic, please access [Rivanna_3](/solarcaratuva.github.io/HI/CadLabRepositorySetUp.md). 
+
 ### Setting up the CadLab Repository onto Local Desktop
 
 1. Open the desired repository directory. 
 2. Copy the Git URL in the top left of the page as seen in the image below. When copying over the Git Url, make sure to access the right branch to be copied over. We will discuss this in detail later on this page.  
-![image](/solarcaratuva.github.io/HI/images/Screenshot%202024-09-21%20at%204.06.02 PM.png)
+
+![image](/solarcaratuva.github.io/HI/assets/images/Screenshot%202024-09-21%20at%204.06.02 PM.png)
 
 3. On your local desktop, create a folder to house all Solar Car files to ease the transition and keep everything clean. 
         mkdir Solar_Car_UVA
@@ -51,11 +52,32 @@ To streamline the concept of branching, the following section explores how branc
 
 **concept of branching in CadLab**
 
+Within CadLab, there are two types of branching that can be created: a version branch or a feature branch. To create a new branch, click on the plus button in the top left corner of the screen. It will get you to the following page:
+
+![image](/solarcaratuva.github.io/HI/assets/images/Screenshot%202024-09-22%20at%2012.33.08 PM.png)
+
+For our intents and purposes, most branches created will be implmeneitng a feature of the PCB boards. When we finish and deploy a set of PCB boards to production then we will create a version branch for the next iteration of the boards. Unless otherwise specified, make sure to create a feature branch. The name of the branch will be the thing you are trying to implement. The source branch will be specified so make sure to be using the right branch that you want to branch off of. 
 
 ## KiCad
 Once CadLab has been set-up and the files from the repository are pulled to your local device, make sure to have a folder structure to be able to organize all the files you will be needing to keep track of in Solar Car. It is better to set this up earlier than later to maintain the maximum efficiency. 
 
 ### Downloading KiCad
+1. The first step to download files  is to follow this [link](https://www.kicad.org/download/)
+2. Specify the operating system used by your laptop and folow the set-up instructions given by KiCad
 
-**download steps**
-**How to open a file**
+After KiCad is downloaded, you want to make sure that you are working on the predefined PCB and schematic files. We will discuss how to open them in the next section. 
+
+### Opening Files in KiCad
+
+1. Open your KiCad program
+2. You will see the following screen. You want to click on the second icon from the top on the left most side bar. 
+
+![image](/solarcaratuva.github.io/HI/assets/images/Screenshot%202024-09-22%20at%2012.41.53 PM.png)
+
+**Note** A file has already been uploaded in the above screenshot. This is not a default screen.
+3. Specify the file/folder you want loaded into KiCad by giving it the directory path to it. The file will be of .kicad_pro type file.  
+4. Now that the file has been opened onto KiCad, you should be able ot see everything associated with that board. Feel free to move in between the files. Everytime you are done, make sure to push your changes to the CadLab repository so everyone can have access to the latest changes. 
+
+**Note:**
+    To create a new  file in KiCad from scratch, access the icon above the one listed above.  It will be the top most icon on the left most side of the page. 
+
