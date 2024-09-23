@@ -8,7 +8,7 @@ has_children: true
 
 The Embedded subteam designs, implements, and tests the embedded code that monitors and controls the Solar Car. Additionally, the subteam creates and maintains other supporting software projects to assist in debugging and to provide analysis. The subteam is a member of the Electrical Team. 
 
-[Team GitHub Account](https://github.com/solarcaratuva)
+[Team GitHub Account](https://github.com/solarcaratuva) <br>
 [Meeting Notes, Fall 2024](https://docs.google.com/document/d/1pQLibWxJFyWZa9K9yYxppgRNWEAk5uyTw72D2mfA_gE/edit?usp=sharing)
 
 ## How to find info on this wiki
