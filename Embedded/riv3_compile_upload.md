@@ -15,6 +15,7 @@ has_children: false
 3. Windows Users: update all packages on WSL by activating WSL (type `wsl` into a command prompt) and run `sudo apt-get update && sudo apt-get upgrade`
     - you will be prompted for your WSL password, not Windows password
 4. Install Docker: [Link](https://docs.docker.com/engine/install/)
+    - Windows Users: enable the WSL integration setting: `Settings >> Resources >> WSL Integration`
 
 **Setting up the Compilation Environment**
 
@@ -32,7 +33,7 @@ Windows Users: do these steps within WSL using a WSL command prompt (type `wsl` 
 2. Run `cd Rivanna2` then `./compile.sh`
     - compilation should take under a minute
 
-Compiled filed are stored in the `cmake_build` directory. <br>
+Compiled files are stored in the `cmake_build` directory. <br>
 Remember that this compiles the *current* Git branch only. 
 
 **What is Actually Happening**

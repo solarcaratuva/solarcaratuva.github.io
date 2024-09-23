@@ -8,13 +8,16 @@ has_children: true
 
 The Embedded subteam designs, implements, and tests the embedded code that monitors and controls the Solar Car. Additionally, the subteam creates and maintains other supporting software projects to assist in debugging and to provide analysis. The subteam is a member of the Electrical Team. 
 
-**[Team GitHub Page Link](https://github.com/solarcaratuva)**
+[Team GitHub Account](https://github.com/solarcaratuva)
+[Meeting Notes, Fall 2024](https://docs.google.com/document/d/1pQLibWxJFyWZa9K9yYxppgRNWEAk5uyTw72D2mfA_gE/edit?usp=sharing)
 
 ## How to find info on this wiki
 
-- Finding links to projects - go to the appropriate entry under `Embedded` in the sidebar menu dropdown
-- Project specific info (like how to compile Rivanna3) - go to that project's GitHub page (linked in this Wiki) and view the `README`
-- Other documentation - see the Embedded `Documentation` page, another subteam's documentation page, or use the *Search Box*
+- Rivanna3 - see the *Compile & Upload* page, the *Development Guide*, or the *[GitHub Repo](https://github.com/solarcaratuva/Rivanna3)*
+- Other projects - see the *Supporting Projects* page
+- Other documentation - see the *Documentation* page, another subteam's documentation page, or use the *Search Box*
+
+Note that every project has an associated `Readme.md` in its repo that explains the project and gives instructions. *Rivanna3* has additional info on this wiki as well. 
 
 ## Meeting Times
 

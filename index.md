@@ -13,9 +13,8 @@ The team is grouped into three teams and their subteams: mechanical, electrical,
 
 ## Quick Links
 - [Main Team Website](https://www.solarcaratuva.org/home)
-- [Shared Google Drive Folder]() *talk to your lead for access* TODO: `anyone with this link can edit` should be changed before adding the link here
+- [Shared Google Drive Folder](https://drive.google.com/drive/folders/0B6wsU4vmtrCsfnE0dFlIQ3RiRnhvR2l1MGVKRkV6QjkxQ2JPMURKWWRZanVnY0h2bVp0Q1U?resourcekey=0-eRltKtG5D0ODPIgrunXrtQ&usp=sharing)
 - [Team GitHub Account](https://github.com/solarcaratuva)
-- *Discord invite: talk to your lead for access*
 
 
 ## Subteams
