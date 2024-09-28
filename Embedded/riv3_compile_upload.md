@@ -7,6 +7,8 @@ has_children: false
 
 # Compiling
 
+[Rivanna3 GitHub Link](https://github.com/solarcaratuva/Rivanna3)
+
 **Software Installation**
 
 1. Install Git: [Link](https://git-scm.com/download/win)
@@ -44,4 +46,30 @@ Remember that this compiles the *current* Git branch only.
 
 # Uploading
 
-WIP
+**Software Installation: Windows**
+
+1. Download [ST Tools](https://github.com/stlink-org/stlink/releases). Note that you will install this on Windows, not WSL
+    -Recommended: download `stlink-1.7.0-x86_64-w64-mingw32.zip` from version `1.7.0`. Version `1.8.0` has dependency issues and doesn't have any apparent features not in `1.7.0`
+2. Unzip the zip file and copy the unzipped folder to `Program Files (x86)`
+3. Inside the unzipped folder there is a `bin` folder, add this to path
+    - [Guide: Adding values to Path](https://www.eukhost.com/kb/how-to-add-to-the-path-on-windows-10-and-windows-11/)
+
+Verify: Open a new command prompt and enter `st-flash --version`. This should print the software version. 
+
+
+**Software Installation: Mac**
+
+TODO
+
+**Actually Uploading**
+
+1. Open the *Rivanna3* folder
+    - Windows Users: this should be stored in WSL; open in WSL, not through the Windows file explorer
+2. In the *Rivanna3* folder, run `python3 upload.py board`, replacing *board* with the name of the board you are uploading to
+
+**What is Actually Happening**
+
+1. Windows Users: the WSL file system is added as a network drive, named `W:`, allowing a program running in Windows to easily access files stored in WSL
+2. The appropriate `st-flash` command is run
+    - Windows Users: this is run in Windows, not WSL
+3. Windows Users: the network drive `W:` is deleted
