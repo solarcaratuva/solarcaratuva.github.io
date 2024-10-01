@@ -49,7 +49,7 @@ Remember that this compiles the *current* Git branch only.
 **Software Installation: Windows**
 
 1. Download [ST Tools](https://github.com/stlink-org/stlink/releases). Note that you will install this on Windows, not WSL
-    -Recommended: download `stlink-1.7.0-x86_64-w64-mingw32.zip` from version `1.7.0`. Version `1.8.0` has dependency issues and doesn't have any apparent features not in `1.7.0`
+    - Recommended: download `stlink-1.7.0-x86_64-w64-mingw32.zip` from version `1.7.0`. Version `1.8.0` has dependency issues and doesn't have any apparent features not in `1.7.0`
 2. Unzip the zip file and copy the unzipped folder to `Program Files (x86)`
 3. Inside the unzipped folder there is a `bin` folder, add this to path
     - [Guide: Adding values to Path](https://www.eukhost.com/kb/how-to-add-to-the-path-on-windows-10-and-windows-11/)

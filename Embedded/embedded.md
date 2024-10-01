@@ -8,8 +8,15 @@ has_children: true
 
 The Embedded subteam designs, implements, and tests the embedded code that monitors and controls the Solar Car. Additionally, the subteam creates and maintains other supporting software projects to assist in debugging and to provide analysis. The subteam is a member of the Electrical Team. 
 
-[Team GitHub Account](https://github.com/solarcaratuva) <br>
-[Meeting Notes, Fall 2024](https://docs.google.com/document/d/1pQLibWxJFyWZa9K9yYxppgRNWEAk5uyTw72D2mfA_gE/edit?usp=sharing)
+## Quick Links
+
+- [Meeting Notes, Fall 2024](https://docs.google.com/document/d/1pQLibWxJFyWZa9K9yYxppgRNWEAk5uyTw72D2mfA_gE/edit?usp=sharing)
+- [Team GitHub Account](https://github.com/solarcaratuva)
+    - [Rivanna3 Repo](https://github.com/solarcaratuva/Rivanna3)
+- [2024-2025 Project Plans](https://drive.google.com/drive/folders/1l6pzut1ouPizTJ97YKT4nYmZ63-xvKyO?usp=sharing)
+    - [Rivanna3 (New Embedded Codebase)](https://docs.google.com/document/d/1UeZ0uGlNkovMYhrTrUKuw6JWsC_MBjAAVzl9hy9Pou4/edit?usp=sharing)
+    - [CAN Message Logger v2](https://docs.google.com/document/d/109A7S6d5Id5UF5PI4u3rVHdN-SYbeLwaMM3_lSZ0ErY/edit?usp=sharing)
+    - [Embedded Software Testing System](https://docs.google.com/document/d/1KvvGvD-rkz_4YHhR5YGFgAVmCLTteNBIxGZN5sZjqYg/edit?usp=sharing)
 
 ## How to find info on this wiki
 
