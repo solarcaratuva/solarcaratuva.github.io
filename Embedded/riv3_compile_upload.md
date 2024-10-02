@@ -59,7 +59,9 @@ Verify: Open a new command prompt and enter `st-flash --version`. This should pr
 
 **Software Installation: Mac**
 
-TODO
+Run the command `brew install stlink`
+
+Verify: Open a new command prompt and enter `st-flash --version`. This should print the software version. 
 
 **Actually Uploading**
 
