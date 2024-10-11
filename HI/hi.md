@@ -13,3 +13,9 @@ We meet every Sunday at the [Reactor](https://www.google.com/maps/place/Solar+Ca
 
 
 Mid-Week meetings times are TBD!
+
+Additional resources to understand KiCad:
+
+[How to make a footprint from scratch](https://forum.kicad.info/t/tutorial-how-to-make-a-footprint-in-kicad-5-1-x/11092/3)
+
+[How to make a symbol from scratch](https://forum.kicad.info/t/tutorial-how-to-make-a-symbol-kicad-v5-1-x/13336/3)
