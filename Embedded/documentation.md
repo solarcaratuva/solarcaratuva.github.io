@@ -18,6 +18,7 @@ has_children: false
 - [STM32G4 Series MCUs (the long datasheet)](https://drive.google.com/file/d/1tu3UAFcuiJ1GYlyNSSthIfGxmnAOnozL/view?usp=sharing)
 - [ST-Link v3](https://drive.google.com/file/d/1CLeB6Qn7uZlpoyrnxe7ACSg4hJbsPsnE/view?usp=sharing)
 - [ScreenBoard in the Steering Wheel](https://riverdi.com/product/5-inch-lcd-display-stm32u5-frame-rvt50hqsfwn00)
+- [Motor docs](https://drive.google.com/drive/folders/1rYC0lSPNIqc_i5MnhwgIIUvX2Mp59hHf?usp=sharing)
 
 ## External Guides
 - [Git Guide](https://github.com/git-guides) and [Git Video Explanation](https://youtu.be/HkdAHXoRtos?si=yp5dmcoSZ1O8sAkU)
@@ -28,4 +29,3 @@ has_children: false
 ## External References
 - [ST-Tools commands (like st-flash) and documentation](https://github.com/stlink-org/stlink)
 - [MbedOS official documentation](https://os.mbed.com/docs/mbed-os/v6.16/introduction/index.html)
-- [Motor docs](https://drive.google.com/drive/folders/1rYC0lSPNIqc_i5MnhwgIIUvX2Mp59hHf?usp=sharing)
