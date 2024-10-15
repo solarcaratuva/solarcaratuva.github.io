@@ -13,7 +13,7 @@ has_children: false
 
 ## Project Architecture
 
-**Folder Structure**: at a high level, the project is structured into folders as follows:
+At a high level, the project is structured into folders as follows:
 - Boards: `WheelBoard`, `TelemetryBoard`, and `PowerBoard` hold code for those respective boards
 - `Common` contains code that is used across the entire project; a significant portion of it is auto-generated
 - MbedOS: `mbed-os` and `TARGET_UVA_SOLAR_CAR` contain MbedOS libraries and configuration
