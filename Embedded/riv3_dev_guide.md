@@ -46,7 +46,7 @@ There are 2 other benefits as well that come with CAN by default, but could be e
 
 Each of our CAN messages is *defined* in a DBC file. This file specifies what data a given CAN message will hold and its identifier; CAN messages cannot be defined ad-hoc, they must meet an already defined specification. 
 
-Our Messages are defined [here](https://github.com/solarcaratuva/CAN-messages). We use the Python package `cantools` to read and write CAN messages in Python, and to generate the C structs for each message used in the Embedded Codebase. 
+Our Messages are defined [here](https://github.com/solarcaratuva/CAN-messages). We use the Python package [cantools](https://cantools.readthedocs.io/en/latest/) to read and write CAN messages in Python, and to generate the C structs for each message used in the Embedded Codebase. 
 
 **Sending and receiving CAN messages in the Embedded Codebase**
 
