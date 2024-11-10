@@ -14,4 +14,4 @@ has_children: false
 
 If you do not see any files within this repository then run the following command. Since the repository for Rivanna 3 is set up to invove submodules, this changes our approach to handling and updating the KiCad library.
 
-        git submodule update  --init --recursive
+git submodule update  --init --recursive
