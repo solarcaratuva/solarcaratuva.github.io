@@ -1,5 +1,5 @@
 ---
-title: CadLab Repository Structure for Rivanna 3
+title: Handling Rivanna 3 Repository
 nav_order: 5
 parent: Hardware Integration
 has_children: false
