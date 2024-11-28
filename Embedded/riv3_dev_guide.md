@@ -16,7 +16,7 @@ has_children: false
 At a high level, the project is structured into folders as follows:
 - Boards: `WheelBoard`, `TelemetryBoard`, and `PowerBoard` hold code for those respective boards
 - `Common` contains code that is used across the entire project; a significant portion of it is auto-generated
-- MbedOS: `mbed-os` and `TARGET_UVA_SOLAR_CAR` contain MbedOS libraries and configuration
+- MbedOS: `mbed-os` and `TARGET_...` folders contain MbedOS libraries and configuration
 - `cmake_build` contains the compiled code from across the project that is actually uploaded to the car
 - Legacy: `DriverBoard`, `BatteryBoard`, and `Motor` are legacy boards and code used in *Rivanna2S*, and are only shown in *Rivanna3* for easy reference
 
@@ -65,3 +65,29 @@ The current CAN networks are as follows:
 - Main CAN - almost everything is attached to this network, when people say 'the CAN network' they mean main CAN
 - Motor CAN - connects the motor controller and the PowerBoard
 - BMS Config - used solely by the *Power subteam* to configure the battery management system
+
+## Precharge
+
+Precharge is a system used on the high-voltage part of the car's electrical system to prevent [inrush current](https://en.wikipedia.org/wiki/Inrush_current). This section refers to the motor, but also applies to the MPPTs as well. Precharge logic and hardware is managed by the *Power Subteam*; *Embedded* only implements the logic in software.
+
+**Theory**
+
+When the motor is connected to the HV system, the circuit can be modeled as a simple [RC circuit](https://en.wikipedia.org/wiki/RC_circuit), because of the inherent capacitance and resistance of the motor. The time taken to charge the capacitor is proportional to `resistance * capacitance`. By the inherent motor properties, the time constant is small, and the inherent resistance is very small. This results in very high current when the motor is first energized, as the capacitor is charging fast with little resistance; this is known as [inrush current](https://en.wikipedia.org/wiki/Inrush_current), which is bad because it causes extra wear and tear on the motor. 
+
+![Precharge Schematic](/assets/images/Embedded/precharge.png)
+
+The solution: Add another resistor in series to increase the time constant, and therefore reduce the magnitude of current. This resistor is in parallel with a relay (switch) to enable and disable (short it) it, because:
+* The resistor should be enabled when first energizing the motor, to reduce inrush current.
+* The resistor should be disabled when the motor is in operation, so the motor can quickly draw the current it needs; the time constant must be minimized for the motor to be responsive. 
+
+*Embedded* implements the logic that controls this relay. 
+
+**Logic**
+
+Normal Precharge operation:
+1. Open the relay (enabling the precharge resistor)
+2. Wait until *contactor 12* is below xxx V, or xxx seconds have passed
+3. Close the relay (disabling the precharge resistor)
+
+Edge cases:
+*TBD*
