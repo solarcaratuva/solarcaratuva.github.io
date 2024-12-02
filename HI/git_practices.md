@@ -18,9 +18,9 @@ Included below is a table of git commands to leverage. It will be a great refere
 ## Submodules Handling
 Since our CadLab repository structure for PCB boards and its respective schematics involve submodules, the following command is extremely important to run each time you work on making change: 
 
-        git submodule update  --remote
+        git submodule update  --recursive --remote
 
-This command allows for you to update your submodule to its latest version to deploy and utilize in your designs. For more information on the CadLab repository structure. 
+This command allows for you to update your submodule to its latest version to deploy and utilize in your designs. For more information on the [CadLab repository structure](/HI/CadLabRepositorySetUp.md). 
 
 # Best Git Practices
 
