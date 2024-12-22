@@ -21,7 +21,7 @@ The Embedded subteam designs, implements, and tests the embedded code that monit
 ## How to find info on this wiki
 
 - Rivanna3 - see the *Compile & Upload* page, the *Development Guide*, or the *[GitHub Repo](https://github.com/solarcaratuva/Rivanna3)*
-- Other projects - see the *Supporting Projects* page
+- Other projects - see the *Projects* page
 - Other documentation - see the *Documentation* page, another subteam's documentation page, or use the *Search Box*
 
 Note that every project has an associated `Readme.md` in its repo that explains the project and gives instructions. *Rivanna3* has additional info on this wiki as well. 
