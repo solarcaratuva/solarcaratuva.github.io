@@ -20,6 +20,7 @@ has_children: false
 - [ST-Link v3](https://drive.google.com/file/d/1CLeB6Qn7uZlpoyrnxe7ACSg4hJbsPsnE/view?usp=sharing)
 - [ScreenBoard in the Steering Wheel](https://riverdi.com/product/5-inch-lcd-display-stm32u5-frame-rvt50hqsfwn00)
 - [Motor docs](https://drive.google.com/drive/folders/1rYC0lSPNIqc_i5MnhwgIIUvX2Mp59hHf?usp=sharing)
+- [Orion BMS 2 Utility Manual](https://www.orionbms.com/manuals/utility_o2/)
 
 ## External Guides
 - [Git Guide](https://github.com/git-guides) and [Git Video Explanation](https://youtu.be/HkdAHXoRtos?si=yp5dmcoSZ1O8sAkU)
