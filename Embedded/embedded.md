@@ -10,7 +10,7 @@ The Embedded subteam designs, implements, and tests the embedded code that monit
 
 ## Quick Links
 
-- [Meeting Notes, Fall 2024](https://docs.google.com/document/d/1pQLibWxJFyWZa9K9yYxppgRNWEAk5uyTw72D2mfA_gE/edit?usp=sharing)
+- [Meeting Notes, Spring 2025](https://docs.google.com/document/d/1aydVAiKjACNDg9fl7FEQY7jBEOhC74BMQyXjm0kmtw4/edit?usp=sharing)
 - [Team GitHub Account](https://github.com/solarcaratuva)
     - [Rivanna3 Repo](https://github.com/solarcaratuva/Rivanna3)
 - [2024-2025 Project Plans](https://drive.google.com/drive/folders/1l6pzut1ouPizTJ97YKT4nYmZ63-xvKyO?usp=sharing)
