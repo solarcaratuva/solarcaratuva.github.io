@@ -82,12 +82,16 @@ The solution: Add another resistor in series to increase the time constant, and 
 
 *Embedded* implements the logic that controls this relay. 
 
-**Logic**
+**Normal Logic**
 
-Normal Precharge operation:
-1. Open the relay (enabling the precharge resistor)
-2. Wait until *contactor 12* is below xxx V, or xxx seconds have passed
-3. Close the relay (disabling the precharge resistor)
+1. Wait until *contactor 12* rising edge. 
+2. Wait until *discharge_relay_status* is high (this signal is sent by the BMS over CAN in the *BPSPackInformation* message).
+3. Close (enable) *motor precharge enable*.
+4. Wait until *discharge RC voltage* is greater than 95% of *pack_voltage* (this signal is sent by the BMS over CAN in the *BPSPackInformation* message).
+5. Close (enable) *discharge contactor*, wait a small delay, open (disable) *motor precharge enable*.
 
-Edge cases:
-*TBD*
+Note that the process as described is for motor precharge, but MPPT precharge is the same process, just with *discharge* and *motor* variables replaced with *charge* and *MPPT* variables. Both motor and MPPT precharge processes happen concurrently and independently. 
+
+**Fault Logic**
+
+If at any time (before, during, or after precharge) *contactor 12* has a falling edge or a fault occurs elsewhere, then open (disable) the *charge* and *discharge contactor* and the *motor* and *MPPT precharge enable* relays. 
