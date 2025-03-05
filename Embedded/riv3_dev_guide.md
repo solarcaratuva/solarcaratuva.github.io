@@ -95,3 +95,14 @@ Note that the process as described is for motor precharge, but MPPT precharge is
 **Fault Logic**
 
 If at any time (before, during, or after precharge) *contactor 12* has a falling edge or a fault occurs elsewhere, then open (disable) the *charge* and *discharge contactor* and the *motor* and *MPPT precharge enable* relays. 
+
+
+## Cruise Control
+
+**PID**
+
+Cruise control is a function of a car to make it keep at a constant speed. For Rivanna3, cruise control is implemented using the [PID Algorithm](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller). PID works by setting the output to the motor based on 3 constants. The PID constants can be found in `PowerBoard/lib/include/CruiseControl.h`. These should be tuned if cruise control is not effectively reaching the target speed. Please see [PID without a PHD](https://web2.qatar.cmu.edu/~gdicaro/16311-Fall17/slides/PID-without-PhD.pdf) for more information on tuning.
+
+**Driver Usage**
+
+The cruise control target speed can be changed by the driver. There are buttons that increase, decrease, and toggle the cruise control. The number (in mph) that the cruise control target will change by when the cruise up or down buttons are pressed is also contained in `PowerBoard/lib/include/CruiseControl.h`, and is currently set to 5mph.
