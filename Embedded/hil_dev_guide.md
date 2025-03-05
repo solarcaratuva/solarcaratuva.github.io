@@ -17,9 +17,13 @@ TODO
 
 ## Interfaces and Simulated Hardware
 
-The HIL system has the same interfaces that the real boards have with the rest of the car, enabling the system to simulate the rest of the car without the embedded code under test knowing. 
+The HIL system has the same interfaces that the real boards have with the rest of the car, enabling the system to simulate the rest of the car and the driver without the embedded code under test knowing. 
 
-**GPIO Pins**
+**Digital GPIO Pins**
+
+TODO
+
+**Analog GPIO Pins**
 
 TODO
 
