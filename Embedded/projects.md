@@ -15,7 +15,7 @@ The Embedded Codebase is the code that is compiled and uploaded to the Solar Car
 
 ### Current Design Cycle
 
-[**Rivanna3** (2024-present)](https://github.com/solarcaratuva/Rivanna3)
+[**Rivanna3** (2024-present)](https://github.com/solarcaratuva/Rivanna3), [Telemetry WheelBoard Display](https://github.com/solarcaratuva/Rivanna3_Telemetry_Display)
 
 
 ### Previous Design Cycles
