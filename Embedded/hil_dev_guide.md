@@ -49,9 +49,7 @@ Analog GPIO pins are also described in `gpioPin.py` file.
 
     - `on()`: sets the analog pin to its maximum value (duty cycle of 100%)
 
-    
-
-TODO
+    - `off()`: set the analog pin to its lowest value (duty cycle of 0%)
 
 **CAN Messaging**
 
