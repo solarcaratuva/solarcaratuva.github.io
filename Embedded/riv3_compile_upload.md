@@ -23,6 +23,7 @@ has_children: false
 
 Windows Users: do these steps within WSL using a WSL command prompt (type `wsl` into a command prompt to enter WSL)
 1. Make a folder for Solar Car code on your machine, if not done already, and `cd` into it
+    - Windows Users: When you first open WSL, the working directory will be `/mnt/c/Users/username`. This is inside your Windows filesystem. You should NOT make the folder here; if you do, compilation will be VERY slow. You should run `cd ~` to go to your Linux home directory and make the folder there; the path of the folder should be similar to `~/solarCarRepo` or `/home/username/solarCarRepo`. 
 2. Clone Rivanna3 into that directory using `git clone https://github.com/solarcaratuva/Rivanna3.git`
 3. Change directory into the cloned directory (`cd Rivanna3`)
 4. Run the following command: `docker run --name Rivanna3_compile -it -v $(pwd)/:/root/Rivanna2:Z ghcr.io/solarcaratuva/rivanna2-env`
