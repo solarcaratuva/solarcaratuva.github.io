@@ -29,15 +29,24 @@ Windows Users: do these steps within WSL using a WSL command prompt (type `wsl` 
 4. Run the following command: `docker run --name Rivanna3_compile -it -v $(pwd)/:/root/Rivanna2:Z ghcr.io/solarcaratuva/rivanna2-env`
 5. Run `cd Rivanna2` then `mbed-tools deploy`
 
-**Actually Compiling**
+**Actually Compiling: using the script option**
 
+In the *Rivanna3* folder, run the compile script, `compile.py`. See the API below:
+- `-c`, `--clean`: flag, optional. Deletes previous build files before compiling, forcing the compiler to do a clean compile.
+- `-s`, `--silent`: flag, optional. Will stop the compile command from printing debug info and showing the progress bar.
+
+Example: `python3 compile.py -c`.
+Note that this script won't work if the container wasn't made with the `docker run...` command from above, or with old versions of Docker. 
+
+**Actually Compiling: manual option**
+
+1. Start the container by running `docker start Rivanna3_compile`
 1. Attach the command prompt to the container by running `docker attach Rivanna3_compile`
-    - Docker Desktop and the *Rivanna3_compile* container must be running
+    - Docker Desktop must be running
 2. Run `cd Rivanna2` then `./compile.sh`
     - compilation should take under a minute
 
-Compiled files are stored in the `cmake_build` directory. <br>
-Remember that this compiles the *current* Git branch only. 
+Compiled files are stored in the `cmake_build` directory. Remember that this compiles the *current* Git branch only. 
 
 **What is Actually Happening**
 
@@ -49,30 +58,34 @@ Remember that this compiles the *current* Git branch only.
 
 **Software Installation: Windows**
 
-1. Download [ST Tools](https://github.com/stlink-org/stlink/releases). Note that you will install this on Windows, not WSL
-    - Recommended: download `stlink-1.7.0-x86_64-w64-mingw32.zip` from version `1.7.0`. Version `1.8.0` has dependency issues and doesn't have any apparent features not in `1.7.0`
-2. Unzip the zip file and copy the unzipped folder to `Program Files (x86)`
-3. Inside the unzipped folder there is a `bin` folder, add this to path
-    - [Guide: Adding values to Path](https://www.eukhost.com/kb/how-to-add-to-the-path-on-windows-10-and-windows-11/)
-
-Verify: Open a new command prompt and enter `st-flash --version`. This should print the software version. 
-
+1. Run `wget https://github.com/stlink-org/stlink/releases/download/v1.8.0/stlink_1.8.0-1_amd64.deb` in WSL to download the package installer
+2. Run `sudo dpkg -i --force-overwrite ./stlink_1.8.0-1_amd64.deb` in WSL to install the package; this will take a few minutes
+3. Run `rm stlink_1.8.0-1_amd64.deb` in WSL to delete the installer when finished
+4. Verify: Open a new command prompt in WSL and run `st-flash --version`. This should print `v1.8.0`. 
+    - GLIBC Error: Your version of Ubuntu is too old, [update Ubuntu](https://documentation.ubuntu.com/server/how-to/software/upgrade-your-release/index.html).
+5. Install [usbipd](https://learn.microsoft.com/en-us/windows/wsl/connect-usb) in Windows
 
 **Software Installation: Mac**
 
-Run the command `brew install stlink`
-
-Verify: Open a new command prompt and enter `st-flash --version`. This should print the software version. 
+1. Run the command `brew install stlink`
+2. Verify: Open a new command prompt and enter `st-flash --version`. This should print `v1.8.0`. 
 
 **Actually Uploading**
 
 1. Open the *Rivanna3* folder
     - Windows Users: this should be stored in WSL; open in WSL, not through the Windows file explorer
-2. In the *Rivanna3* folder, run `python3 upload.py board`, replacing *board* with the name of the board you are uploading to
+2. In the *Rivanna3* folder, run the upload script, `upload.py`. See the API below:
+
+Arguments:
+- `board`: positional, required argument. Specifies which board you are uploading to.
+- `-p `, `--sudo`: flag, **required for Windows users**. The flag should be followed by your WSL password.
+- `-s`, `--silent`: flag, optional. Will stop the upload command from printing debug info and showing the progress bar.
+
+Example: `python3 upload.py power -p my_password`
 
 **What is Actually Happening**
 
-1. Windows Users: the WSL file system is added as a network drive, named `W:`, allowing a program running in Windows to easily access files stored in WSL
-2. The appropriate `st-flash` command is run
-    - Windows Users: this is run in Windows, not WSL
-3. Windows Users: the network drive `W:` is deleted
+1. Windows Users: the ST-Link is attached to WSL, giving WSL access to it. Commands from `usbipd.exe` are used, which are called from WSL but actually run in Windows. 
+2. The appropriate `st-flash` command is run.
+    - Windows Users: the command is run as *sudo*, because your WSL user account isn't given permission to use the ST-Link.
+3. Windows Users: the ST-Link is detached from WSL.
