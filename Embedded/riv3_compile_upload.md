@@ -32,10 +32,13 @@ Windows Users: do these steps within WSL using a WSL command prompt (type `wsl` 
 **Actually Compiling: using the script option**
 
 In the *Rivanna3* folder, run the compile script, `compile.py`. See the API below:
+
+Arguments: 
 - `-c`, `--clean`: flag, optional. Deletes previous build files before compiling, forcing the compiler to do a clean compile.
 - `-s`, `--silent`: flag, optional. Will stop the compile command from printing debug info and showing the progress bar.
 
 Example: `python3 compile.py -c`.
+
 Note that this script won't work if the container wasn't made with the `docker run...` command from above, or with old versions of Docker. 
 
 **Actually Compiling: manual option**
