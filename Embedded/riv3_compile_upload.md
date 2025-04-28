@@ -92,3 +92,22 @@ Example: `python3 upload.py power -p my_password`
 2. The appropriate `st-flash` command is run.
     - Windows Users: the command is run as *sudo*, because your WSL user account isn't given permission to use the ST-Link.
 3. Windows Users: the ST-Link is detached from WSL.
+
+# Monitoring
+
+A serial monitor, such as `monitor.py`, can be used to read debug log statements from the microcontrollers. 
+
+These log messages look like:
+```log
+00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x406 Length 6 Data 0x5b1e5e010000
+00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x200 Length 8 Data 0x0080010000000000
+00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x406 Length 6 Data 0x321f1e000000
+00:00:03 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x300 Length 1 Data 0x04
+```
+
+`monitor.py` should be run in WSL for Windows Users. *Pyserial* must be installed, run `python3 -m pip install pyserial`. The script has the following arguments:
+- `-p `, `--sudo`: flag, **required for Windows users**. The flag should be followed by your WSL password.
+- `-l`, `--log`: flag, optional. The flag should be followed by a file path. Logs all messages to the file, creates the file if it doesn't exist, appends if it does exist.
+- `-s`, `--silent`: flag, optional. Will stop any messages from being printed to the terminal. Should be used with *log*.
+
+Example: `python3 monitor.py -p my_password -l logfile.log`
