@@ -98,7 +98,7 @@ These log messages look like:
 *Pyserial* must be installed, run `py -m pip install pyserial` to install. `monitor.py` should be run in WSL for Windows Users, but pyserial must be installed **on Windows**. 
 The script has the following arguments:
 - `-l`, `--log`: flag, optional. The flag should be followed by a file path. Logs all messages to the file, creates the file if it doesn't exist, appends if it does exist.
-- `-f`, `--filter`: flag, optional. Filter out messages without this string, use '|' to separate multiple strings
+- `-f`, `--filter`: flag, optional. Filter out messages without this string, use '\|' to separate multiple strings
 
 Example: `python3 monitor.py -l logfile.log -f CAN`
 
