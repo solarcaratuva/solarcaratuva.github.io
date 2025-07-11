@@ -59,19 +59,11 @@ Compiled files are stored in the `cmake_build` directory. Remember that this com
 
 # Uploading
 
-**Software Installation: Windows**
+**Software Installation**
 
-1. Run `wget https://github.com/stlink-org/stlink/releases/download/v1.8.0/stlink_1.8.0-1_amd64.deb` in WSL to download the package installer
-2. Run `sudo dpkg -i --force-overwrite ./stlink_1.8.0-1_amd64.deb` in WSL to install the package; this will take a few minutes
-3. Run `rm stlink_1.8.0-1_amd64.deb` in WSL to delete the installer when finished
-4. Verify: Open a new command prompt in WSL and run `st-flash --version`. This should print `v1.8.0`. 
-    - GLIBC Error: Your version of Ubuntu is too old, [update Ubuntu](https://documentation.ubuntu.com/server/how-to/software/upgrade-your-release/index.html).
-5. Install [usbipd](https://learn.microsoft.com/en-us/windows/wsl/connect-usb) in Windows
-
-**Software Installation: Mac**
-
-1. Run the command `brew install stlink`
-2. Verify: Open a new command prompt and enter `st-flash --version`. This should print `v1.8.0`. 
+1. Install [STM Cube Programmer](https://www.st.com/en/development-tools/stm32cubeprog.html)
+    - If you don't want to create a STM account, you can download the program from the [team Google Drive](https://drive.google.com/drive/folders/1pRb6ZuMSBsHBbBfg1jJZOFcEL9YN4Twi?usp=sharing)
+2. Add the executable to path; ex. add `C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeProgrammer\bin` to path
 
 **Actually Uploading**
 
@@ -81,17 +73,15 @@ Compiled files are stored in the `cmake_build` directory. Remember that this com
 
 Arguments:
 - `board`: positional, required argument. Specifies which board you are uploading to.
-- `-p `, `--sudo`: flag, **required for Windows users**. The flag should be followed by your WSL password.
 - `-s`, `--silent`: flag, optional. Will stop the upload command from printing debug info and showing the progress bar.
 
-Example: `python3 upload.py power -p my_password`
+Example: `python3 upload.py power`
 
 **What is Actually Happening**
 
-1. Windows Users: the ST-Link is attached to WSL, giving WSL access to it. Commands from `usbipd.exe` are used, which are called from WSL but actually run in Windows. 
-2. The appropriate `st-flash` command is run.
-    - Windows Users: the command is run as *sudo*, because your WSL user account isn't given permission to use the ST-Link.
-3. Windows Users: the ST-Link is detached from WSL.
+1. The entire memory of the microcontroller is erased
+2. The new compiled firmware is flashed onto the microcontroller at the appropriate memory address
+Windows Users: even though this command is invoked in WSL, the command is actually run in Windows
 
 # Monitoring
 
@@ -105,9 +95,15 @@ These log messages look like:
 00:00:03 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x300 Length 1 Data 0x04
 ```
 
-`monitor.py` should be run in WSL for Windows Users. *Pyserial* must be installed, run `python3 -m pip install pyserial`. The script has the following arguments:
-- `-p `, `--sudo`: flag, **required for Windows users**. The flag should be followed by your WSL password.
+*Pyserial* must be installed, run `py -m pip install pyserial` to install. `monitor.py` should be run in WSL for Windows Users, but pyserial must be installed **on Windows**. 
+The script has the following arguments:
 - `-l`, `--log`: flag, optional. The flag should be followed by a file path. Logs all messages to the file, creates the file if it doesn't exist, appends if it does exist.
-- `-s`, `--silent`: flag, optional. Will stop any messages from being printed to the terminal. Should be used with *log*.
+- `-f`, `--filter`: flag, optional. Filter out messages without this string, use '|' to separate multiple strings
 
-Example: `python3 monitor.py -p my_password -l logfile.log`
+Example: `python3 monitor.py -l logfile.log -f CAN`
+
+# Static Analyzer
+
+Running static analysis is an industry-standard practice to reduce time spent debugging by finding static defects early; these are mistakes which are found my analyzing the source code, but not actually running the program. You should run static analysis whenever you make a change to the Embedded codebase and compile.
+
+Use the script by running `python3 static_analysis.py`
