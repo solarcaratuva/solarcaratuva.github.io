@@ -1,5 +1,5 @@
 ---
-title: Rivanna3 Compile & Upload
+title: Compile, Upload, Monitor
 nav_order: 2
 parent: Embedded
 has_children: false
@@ -102,9 +102,3 @@ The script has the following arguments:
 - `-f`, `--filter`: flag, optional. Filter out messages without this string, use '\|' to separate multiple strings
 
 Example: `python3 monitor.py -l logfile.log -f CAN`
-
-# Static Analyzer
-
-Running static analysis is an industry-standard practice to reduce time spent debugging by finding static defects early; these are mistakes which are found my analyzing the source code, but not actually running the program. You should run static analysis whenever you make a change to the Embedded codebase and compile.
-
-Use the script by running `python3 static_analysis.py`. You must install *cppcheck* first, `sudo apt install cppcheck`.
