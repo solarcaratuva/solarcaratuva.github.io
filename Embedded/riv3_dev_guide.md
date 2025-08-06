@@ -18,7 +18,6 @@ At a high level, the project is structured into folders as follows:
 - `Common` contains code that is used across the entire project; a significant portion of it is auto-generated
 - MbedOS: `mbed-os` and `TARGET_...` folders contain MbedOS libraries and configuration
 - `cmake_build` contains the compiled code from across the project that is actually uploaded to the car
-- Legacy: `DriverBoard`, `BatteryBoard`, and `Motor` are legacy boards and code used in *Rivanna2S*, and are only shown in *Rivanna3* for easy reference
 
 ## CAN
 
