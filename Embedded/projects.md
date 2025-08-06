@@ -15,10 +15,12 @@ The Embedded Codebase is the code that is compiled and uploaded to the Solar Car
 
 ### Current Design Cycle
 
-[**Rivanna3** (2024-present)](https://github.com/solarcaratuva/Rivanna3), [Telemetry WheelBoard Display](https://github.com/solarcaratuva/Rivanna3_Telemetry_Display)
+[**Rivanna3S** (2025-present)](https://github.com/solarcaratuva/Rivanna3S)
 
 
 ### Previous Design Cycles
+
+[**Rivanna3** (2024-2025)](https://github.com/solarcaratuva/Rivanna3), [Telemetry WheelBoard Display](https://github.com/solarcaratuva/Rivanna3_Telemetry_Display)
 
 [**Rivanna2S** (2022-2024)](https://github.com/solarcaratuva/Rivanna2S)
 
@@ -41,7 +43,7 @@ This project is the code for a test server used to thoroughly test the Embedded 
 TODO: Fall 2024 - Fall 2025 project
 
 [Onboarding Installer Script](https://github.com/solarcaratuva/Onboarding_Installer) <br>
-This script downloads, installs, and configures the necessary software stack to develop, compile, and upload our embedded code to the car.
+This script downloads, installs, and configures the necessary software stack to develop, compile, and upload our embedded code to the car. DOES NOT CURRENTLY WORK. 
 
 [CAN Messages Definitions](https://github.com/solarcaratuva/CAN-messages) <br>
 This repo contains the `*.dbc` definitions of our various CAN messages.

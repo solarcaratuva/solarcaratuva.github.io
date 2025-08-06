@@ -16,7 +16,7 @@ has_children: false
     - the WSL command prompt can be activated by entering `wsl` into any command prompt
 3. Windows Users: update all packages on WSL by activating WSL (type `wsl` into a command prompt) and run `sudo apt-get update && sudo apt-get upgrade`
     - you will be prompted for your WSL password, not Windows password
-4. Install Docker: [Link](https://docs.docker.com/engine/install/)
+4. Install Docker: [Link](https://docs.docker.com/desktop/)
     - Windows Users: enable the WSL integration setting: `Settings >> Resources >> WSL Integration`
 
 **Setting up the Compilation Environment**
@@ -64,6 +64,7 @@ Compiled files are stored in the `cmake_build` directory. Remember that this com
 1. Install [STM Cube Programmer](https://www.st.com/en/development-tools/stm32cubeprog.html)
     - If you don't want to create a STM account, you can download the program from the [team Google Drive](https://drive.google.com/drive/folders/1pRb6ZuMSBsHBbBfg1jJZOFcEL9YN4Twi?usp=sharing)
 2. Add the executable to path; ex. add `C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeProgrammer\bin` to path
+    - Mac users: run this command to add to path: `sudo ln -s /Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/Resources/bin/STM32_Programmer_CLI /usr/local/bin/STM32_Programmer_CLI`
 
 **Actually Uploading**
 

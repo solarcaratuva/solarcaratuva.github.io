@@ -4,7 +4,7 @@ nav_order: 11
 parent: Embedded
 has_children: false
 ---
-# 2025 Onboarding
+# 2025 Embedded Onboarding
 
 **Welcome to the Solar Car Team and the Embedded Subteam!** Onboarding will consist of the following action items. Complete them in this order: 
 1. downloading and configuring software
@@ -22,7 +22,7 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 ## Downloading Software
 
 1. Create a GitHub account and Discord account, if you don't already have one.
-2. Install Python
+2. Install [Python](https://www.python.org/downloads/)
 3. Install [VS Code](https://code.visualstudio.com/download).
 4. Complete the software installation and setup on [this page](https://solarcaratuva.github.io/Embedded/riv3_compile_upload.html). Complete all of *Compiling*, and complete *Uploading* and *Monitoring* software installation. 
 5. Windows users: install [USBipd](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
@@ -34,7 +34,7 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 - Git Tutorial: all but *Git Config*
 - Git and GitHub: from *Pull from GitHub* to *Push branch to GitHub*
 - Git Contribute: *Git Clone from GitHub* and *GitHub Send Pull Request*
-Git Undo: *Git Reset*
+- Git Undo: *Git Reset*
 - Git Advanced: *Git .gitignore* and *Git Submodules*
 
 
@@ -42,7 +42,6 @@ Git Undo: *Git Reset*
 
 - The project will be a short exercise where new members can interact with the Embedded codebase.
 - Every individual should complete their own project (but can ask others for help); this will probably be the only time you work on a project completely independently while on the team.
-- Specific directions / goals will be given in person. 
 
 **Directions** TODO xxx
 1. Open the *Rivanna3* project on your computer, switch branches to the `onboarding_project` branch (`git checkout onboarding_project`)

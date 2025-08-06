@@ -14,7 +14,7 @@ has_children: false
 ## Project Architecture
 
 At a high level, the project is structured into folders as follows:
-- Boards: `WheelBoard`, `TelemetryBoard`, and `PowerBoard` hold code for those respective boards
+- Boards: `TelemetryBoard`, and `PowerBoard` hold code for those respective boards
 - `Common` contains code that is used across the entire project; a significant portion of it is auto-generated
 - MbedOS: `mbed-os` and `TARGET_...` folders contain MbedOS libraries and configuration
 - `cmake_build` contains the compiled code from across the project that is actually uploaded to the car
