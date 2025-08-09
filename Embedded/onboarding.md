@@ -27,6 +27,7 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 4. Complete the software installation and setup on [this page](https://solarcaratuva.github.io/Embedded/riv3_compile_upload.html). Complete all of *Compiling*, and complete *Uploading* and *Monitoring* software installation. 
 5. Windows users: install [USBipd](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
 6. Authenticate your GitHub account on Git: follow [these instructions](https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git#github-cli)
+    - after authenticating `gh`, you still need to manually set your name and email in Git for GitHub to properly recognize your commits
 
 ## Learning about Git
 
@@ -40,8 +41,7 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 
 ## Onboarding Project
 
-- The project will be a short exercise where new members can interact with the Embedded codebase.
-- Every individual should complete their own project (but can ask others for help); this will probably be the only time you work on a project completely independently while on the team.
+The project will be a short exercise where new members can interact with the Embedded codebase. Every individual should complete their own project (but can ask others for help); this will probably be the only time you work on a project completely independently while on the team.
 
 **Directions** TODO xxx
 1. Open the *Rivanna3* project on your computer, switch branches to the `onboarding_project` branch (`git checkout onboarding_project`)
@@ -49,6 +49,6 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 3. Open `DriverBoard/src/main.cpp` and go to the `signalFlashHandler` function
 4. Read the instructions in the comments, and implement the described logic
 5. When you have reached a milestone:
-    - compile *Rivanna3* to ensure your code in syntactically correct for C++ (compilation warnings are fine, compilation failure is not)
+    - compile *Rivanna3* to ensure your code in syntactically correct for C++; NOTE that other parts of the codebase will generate compilation warnings, but if compilation fails the issue is your code
     - commit and push the changes to your branch
-6. When you are done or have questions, talk to Colby or an Onboarding TA
+6. When you are done or have questions, talk to Colby or another returning team member 

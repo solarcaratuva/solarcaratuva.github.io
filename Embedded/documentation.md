@@ -30,5 +30,5 @@ has_children: false
 - [Python Basics](https://www.w3schools.com/python/)
 
 ## External References
-- [ST-Tools commands (like st-flash) and documentation](https://github.com/stlink-org/stlink)
+- [FreeRTOS official documentation](https://www.freertos.org/Documentation/02-Kernel/04-API-references/01-Task-creation/00-TaskHandle)
 - [MbedOS official documentation](https://os.mbed.com/docs/mbed-os/v6.16/introduction/index.html)
