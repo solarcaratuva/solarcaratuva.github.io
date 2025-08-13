@@ -50,9 +50,9 @@ The project will be a short exercise where new members can interact with the Emb
 **Directions** TODO xxx
 1. Open the *Rivanna3* project on your computer, switch branches to the `onboarding_project` branch (`git checkout onboarding_project`)
 2. make a new branch from this called `onboarding_project_yourname` (`git branch onboarding_project_yourname`) and switch to it using git checkout
-3. Open `DriverBoard/src/main.cpp` and go to the `signalFlashHandler` function
+3. Open `PowerBoard/src/main.cpp` and go to the `signal_flash_handler` function
 4. Read the instructions in the comments, and implement the described logic
 5. When you have reached a milestone:
     - compile *Rivanna3* to ensure your code in syntactically correct for C++; NOTE that other parts of the codebase will generate compilation warnings, but if compilation fails the issue is your code
     - commit and push the changes to your branch
-6. When you are done or have questions, talk to Colby or another returning team member 
+6. When you are done, create a pull request on GitHub to merge your branch into `main`. The request will be rejected, but this is to give you practice in making pull requests. 
