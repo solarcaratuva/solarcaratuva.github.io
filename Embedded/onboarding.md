@@ -47,7 +47,7 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 
 The project will be a short exercise where new members can interact with the Embedded codebase. Every individual should complete their own project (but can ask others for help); this will probably be the only time you work on a project completely independently while on the team.
 
-**Directions** TODO xxx
+**Directions** 
 1. Open the *Rivanna3* project on your computer, switch branches to the `onboarding_project` branch (`git checkout onboarding_project`)
 2. make a new branch from this called `onboarding_project_yourname` (`git branch onboarding_project_yourname`) and switch to it using git checkout
 3. Open `PowerBoard/src/main.cpp` and go to the `signal_flash_handler` function
