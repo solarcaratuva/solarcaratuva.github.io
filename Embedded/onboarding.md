@@ -27,12 +27,16 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 4. Complete the software installation and setup on [this page](https://solarcaratuva.github.io/Embedded/riv3_compile_upload.html). Complete all of *Compiling*, and complete *Uploading* and *Monitoring* software installation. 
 5. Windows users: install [USBipd](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
 6. Authenticate your GitHub account on Git: follow [these instructions](https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git#github-cli)
-    - after authenticating `gh`, you still need to manually set your name and email in Git for GitHub to properly recognize your commits
+    - after authenticating using `gh`, you still need to manually set your name and email in Git for GitHub to properly recognize your commits
+        ```
+        git config --global user.name "Your Name"
+        git config --global user.email "your.email@example.com"
+        ```
 
 ## Learning about Git
 
-[Git](https://en.wikipedia.org/wiki/Git) is the industry-standard verison control system which we use to collaberate effectively when coding. Work through [this guide](https://www.w3schools.com/git/default.asp?remote=github), completing the following sections:
-- Git Tutorial: all but *Git Config*
+[Git](https://en.wikipedia.org/wiki/Git) is the industry-standard version control system which we use to collaborate effectively when coding. Work through [this guide](https://www.w3schools.com/git/default.asp?remote=github), completing the following sections:
+- Git Tutorial: all but *Git Config* and *Git Tagging*
 - Git and GitHub: from *Pull from GitHub* to *Push branch to GitHub*
 - Git Contribute: *Git Clone from GitHub* and *GitHub Send Pull Request*
 - Git Undo: *Git Reset*

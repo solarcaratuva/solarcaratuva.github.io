@@ -82,7 +82,7 @@ Example: `python3 upload.py power`
 
 1. The entire memory of the microcontroller is erased
 2. The new compiled firmware is flashed onto the microcontroller at the appropriate memory address
-Windows Users: even though this command is invoked in WSL, the command is actually run in Windows
+    - Windows Users: even though this command is invoked in WSL, the command is actually run in Windows
 
 # Monitoring
 
