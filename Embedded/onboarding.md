@@ -9,7 +9,8 @@ has_children: false
 **Welcome to the Solar Car Team and the Embedded Subteam!** Onboarding will consist of the following action items. Complete them in this order: 
 1. downloading and configuring software
 2. learning about Git
-3. the onboarding project
+3. learning about some team-specific things
+4. the onboarding project
 
 This page will serve as the hub for onboarding, similar to how this wiki is a hub for the Embedded Subteam's info. You should familiarize yourself with the guides and datasheets in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html), so you know what is available there. 
 
@@ -42,6 +43,9 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 - Git Undo: *Git Reset*
 - Git Advanced: *Git .gitignore* and *Git Submodules*
 
+# Team Specific Learning
+
+In the [Development Guide](https://solarcaratuva.github.io/Embedded/riv3_dev_guide.html) read *Project Architecture* and *CAN*. Also skim through *Precharge* and *Cruise Control*. 
 
 ## Onboarding Project
 
