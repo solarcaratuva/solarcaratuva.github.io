@@ -9,7 +9,8 @@ This repository contains the source code from which the wiki is generated.
 Before making your first changes, please contact the Embedded Lead. Provide your GitHub username, so you can be given editing rights. <br>
 
 - A folder will be created for your subteam. Put ALL your content in this folder; this is to ensure that the source code for this wiki remains organized. 
-    - It is recommended to put any external resources, like PDFs, in the team Google Drive folder and link to them in your pages, rather than putting those files in this repository.
+    - Put any images in `assets/images/<your subteam>/` instead; otherwise they won't render properly 
+    - Put any external resources, like PDFs, in the team Google Drive folder and link to them in your pages, rather than putting those files in this repository.
 - A blank landing page will also be created for your subteam, all pages you create should have this page as their 'parent' (described below). 
 
 ## Prerequisites 
