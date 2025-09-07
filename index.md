@@ -24,7 +24,7 @@ The Electrical Team:
 - [Hardware Integration (HI)](https://solarcaratuva.github.io/HI/hi.html)
 - [Power](https://solarcaratuva.github.io/Power/power_homepage.html)
 - [Solar](https://solarcaratuva.github.io/Solar/solar.html)
-- Telemetry
+- [Telemetry](https://solarcaratuva.github.io/Telemetry/telemetry_homepage.md)
 
 The Mechanical Team:
 - Aerobody and Composites 
