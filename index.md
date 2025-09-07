@@ -23,7 +23,7 @@ The Electrical Team:
 - [Embedded](https://solarcaratuva.github.io/Embedded/embedded.html)
 - [Hardware Integration (HI)](https://solarcaratuva.github.io/HI/hi.html)
 - [Power](https://solarcaratuva.github.io/Power/power_homepage.html)
-- Solar
+- [Solar](https://solarcaratuva.github.io/Solar/solar.html)
 - Telemetry
 
 The Mechanical Team:
