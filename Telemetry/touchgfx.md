@@ -1,7 +1,7 @@
 ---
 title: TouchGFX
 nav_order: 1
-parent: telemetry_homepage
+parent: Telemetry
 has_children: false
 ---
 
