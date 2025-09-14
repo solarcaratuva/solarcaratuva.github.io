@@ -59,4 +59,4 @@ The project will be a short exercise where new members can interact with the Emb
 5. When you have reached a milestone:
     - compile *Rivanna3* to ensure your code in syntactically correct for C++; NOTE that other parts of the codebase will generate compilation warnings, but if compilation fails the issue is your code
     - commit and push the changes to your branch
-6. When you are done, create a pull request on GitHub to merge your branch into `main`. The request will be rejected, but this is to give you practice in making pull requests. 
+6. When you are done, create a pull request on GitHub to merge your branch into `main`. Name it `[onboarding] your name`. The request will be rejected, but this is to give you practice in making pull requests. 
