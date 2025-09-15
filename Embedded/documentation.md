@@ -7,8 +7,8 @@ has_children: false
 # Documentation
 
 ## PowerPoints
-- [Opening Meeting](https://drive.google.com/file/d/1GV1Ph86vunCsnsBcIUX04oiol8AQcEKi/view?usp=sharing)
-- [Software Stack](https://drive.google.com/file/d/1a6h2YoyHt1VBVpDAnqnV-vvIAEQiqU0E/view?usp=sharing) - covers Git, VS Code, Docker, ST-Flash, WSL, WSL USB, Shell Commands, Compilation, Uploading, Serial Monitoring
+- [Fall 2025 Opening Meeting](https://drive.google.com/file/d/1uL4oHC14J2hsjwdwuVNNaqUK9ywWVHsV/view?usp=sharing)
+- [Software Tools Stack](https://drive.google.com/file/d/1VwHsjI9-XFM50LPk8-GlVQ2b1mSVnLBM/view?usp=sharing) - covers Git, Shell Commands, VS Code, Docker, WSL, USBIPD, Compilation, Uploading, Serial Monitor, Static Analyzer
 - [C++ and MbedOS Part 1](https://drive.google.com/file/d/1xnGwHI2RhwMqYtqOCBTmmfYA7BLYZoP-/view?usp=sharing) - covers data types, operators, control structures, constants, functions, structs, defines, header files, GPIO pins, printing to the terminal, threads
 - [C++ and MbedOS Part 2](https://drive.google.com/file/d/1rphQ6yFSpe3nt5k05yxor46LPvud4lQt/view?usp=sharing) - covers casting, pointers, references, arrays, namespaces, interrupts, event queue, CAN, code standards
 - [Python](https://drive.google.com/file/d/104BX9rL39ahvjgLBjNWVAg06n2apQNfb/view?usp=sharing) - covers running python programs, control structures, data structures, code standards, pip, virtual environments, os, sys, threading, subprocess, pyserial, re, atexit, fstrings
