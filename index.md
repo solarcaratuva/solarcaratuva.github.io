@@ -27,7 +27,7 @@ The Electrical Team:
 - [Telemetry](https://solarcaratuva.github.io/Telemetry/telemetry_homepage.html)
 
 The Mechanical Team:
-- Aerobody and Composites 
+- [Aerobody and Composites](https://solarcaratuva.github.io/Aero/aerocomp.html)
 - Brakes and Steering
 - Chassis
 - Suspension
