@@ -1,23 +1,23 @@
 ---
-title: Rivanna3 Development Guide
+title: Rivanna3S Development Guide
 nav_order: 3
 parent: Embedded
 has_children: false
 ---
 
-# Rivanna3 Development Guide
+# Rivanna3S Development Guide
 
-*This page is the main source for explanations about development decisions, and how implemented logic is meant to work at a high-level, for the Rivanna3 Embedded Codebase*
+This page is the main source for explanations about development decisions, and how implemented logic is meant to work at a high-level, for the Rivanna3S Embedded Codebase
 
-[Rivanna3 GitHub Link](https://github.com/solarcaratuva/Rivanna3)
+For explanation on the underlying embedded real-time operating system, see the [PhotonicOS page](https://solarcaratuva.github.io/Embedded/photonic_os.html.)
+
+[Rivanna3S GitHub Link](https://github.com/solarcaratuva/Rivanna3S)
 
 ## Project Architecture
 
 At a high level, the project is structured into folders as follows:
-- Boards: `TelemetryBoard`, and `PowerBoard` hold code for those respective boards
-- `Common` contains code that is used across the entire project; a significant portion of it is auto-generated
-- MbedOS: `mbed-os` and `TARGET_...` folders contain MbedOS libraries and configuration
-- `cmake_build` contains the compiled code from across the project that is actually uploaded to the car
+
+TODO
 
 ## CAN
 
@@ -28,7 +28,7 @@ At a high level, the project is structured into folders as follows:
 
 There are 2 other benefits as well that come with CAN by default, but could be easily replicated and are common:
 
-3. A robust error handling system for when messages fail to send.
+3. A robust error handling system for when messages fail to send or are corrupted.
 4. The hardware specification is built on [differential signaling](https://en.wikipedia.org/wiki/Differential_signalling), which greatly reduces the impact of electrical noise and voltage supply imperfections.
 
 **Terminology**
@@ -37,7 +37,7 @@ There are 2 other benefits as well that come with CAN by default, but could be e
 - CAN bus: the physical communication network
 - CAN network: the high-level concept of the CAN bus with all its nodes attached
 - CAN frame: a serialized CAN message
-- CAN message: data and identifier, in a readable format
+- CAN message: data and identifier, in a human-readable format
 - Signal: a specific piece of data in a CAN message, like a throttle value
 - CAN Transceiver: special hardware that converts logic signals to and from the CAN bus's physical specification
 
@@ -49,15 +49,19 @@ Our Messages are defined [here](https://github.com/solarcaratuva/CAN-messages). 
 
 **Sending and receiving CAN messages in the Embedded Codebase**
 
+TODO update
+
 Under `<board name>/lib/src` for each board there is a file `<board name>CANInterface.cpp` that represents the actual CAN connection for each board.
 - To send messages: code in `main.cpp` calls the `send()` function, and the message is sent and logged.
 - To receive messages: the `message_handler()` function waits for CAN messages. When one is received, the function logs the message, and checks if the message is one of the types of CAN messages it is waiting for. If so, the function calls the appropriate `handle()` function in `main.cpp`; if not, the message is disregarded.
 
 This is further discussed in an [onboarding presentation](https://drive.google.com/file/d/1rphQ6yFSpe3nt5k05yxor46LPvud4lQt/view?usp=sharing). 
 
-**Rivanna3 CAN Networks**
+**Rivanna3S CAN Networks**
 
 The current CAN networks are as follows:
+
+TODO update
 
 ![CAN Diagram](/assets/images/Embedded/CAN_diagram.png)
 
@@ -98,7 +102,7 @@ If at any time (before, during, or after precharge) *contactor 12* has a falling
 
 ## Cruise Control
 
-Cruise control is a common car feature that makes the car drive at a constant speed. For Rivanna3, cruise control is implemented using the [PID Algorithm](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller). PID works by setting the output of the motor based on 3 constants. The PID constants can be found in `PowerBoard/lib/include/CruiseControl.h`. These should be tuned if cruise control is not effectively reaching the target speed. See [PID without a PHD](https://web2.qatar.cmu.edu/~gdicaro/16311-Fall17/slides/PID-without-PhD.pdf) for more information on tuning and PID theory.
+Cruise control is a common car feature that makes the car drive at a constant speed. For Rivanna3S, cruise control is implemented using the [PID Algorithm](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller). PID works by setting the output of the motor based on 3 constants. The PID constants can be found in `PowerBoard/lib/include/CruiseControl.h`. These should be tuned if cruise control is not effectively reaching the target speed. See [PID without a PHD](https://web2.qatar.cmu.edu/~gdicaro/16311-Fall17/slides/PID-without-PhD.pdf) for more information on tuning and PID theory.
 
 **Driver Usage**
 

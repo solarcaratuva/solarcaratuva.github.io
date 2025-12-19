@@ -12,7 +12,7 @@ Solar Car Team at UVA is an experiential learning program of the School of Engin
 The team is grouped into three teams and their subteams: mechanical, electrical, and operations. Mechanical deals with using advanced design and manufacturing tools to create braking, steering, suspension, chassis, and aerobody systems in addition to carbon fiber composites body work. Electrical is responsible for constructing an architecture combining battery, solar array, embedded processing, telemetry, and hardware integration systems. Operations works with fundraising, accounting, university and industrial relations, logistics, and outreach.
 
 ## Quick Links
-- [Main Team Website](https://www.solarcaratuva.org/home)
+- [Main Team Website](https://solarcaratuva.com/)
 - [Shared Google Drive Folder](https://drive.google.com/drive/folders/0B6wsU4vmtrCsfnE0dFlIQ3RiRnhvR2l1MGVKRkV6QjkxQ2JPMURKWWRZanVnY0h2bVp0Q1U?resourcekey=0-eRltKtG5D0ODPIgrunXrtQ&usp=sharing)
 - [Team GitHub Account](https://github.com/solarcaratuva)
 
