@@ -9,7 +9,7 @@ has_children: false
 
 This page is the main source for explanations about development decisions, and how implemented logic is meant to work at a high-level, for the Rivanna3S Embedded Codebase
 
-For explanation on the underlying embedded real-time operating system, see the [PhotonicOS page](https://solarcaratuva.github.io/Embedded/photonic_os.html.)
+For explanation on the underlying embedded real-time operating system, see the [PhotonicOS page](https://solarcaratuva.github.io/Embedded/photonic_os.html)
 
 [Rivanna3S GitHub Link](https://github.com/solarcaratuva/Rivanna3S)
 
