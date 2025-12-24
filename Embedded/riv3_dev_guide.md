@@ -61,13 +61,10 @@ This is further discussed in an [onboarding presentation](https://drive.google.c
 
 The current CAN networks are as follows:
 
-TODO update
-
 ![CAN Diagram](/assets/images/Embedded/CAN_diagram.png)
 
 - Main CAN - almost everything is attached to this network, when people say 'the CAN network' they mean main CAN
 - Motor CAN - connects the motor controller and the PowerBoard
-- BMS Config - used solely by the *Power subteam* to configure the battery management system
 
 ## Precharge
 

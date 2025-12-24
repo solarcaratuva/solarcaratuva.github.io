@@ -24,7 +24,7 @@ The team previously used [MbedOS](https://os.mbed.com/mbed-os/), but chose to le
 
 ## Adding new features
 
-**Not hardware related**: (example: adding a class to process data)
+**Not hardware related**: (example: adding a class to process data) <br>
 If this library will only be used by a specific board, put the code in that board's folder, otherwise put it in `Common/`.
 
 **Hardware related**: (example: adding support for OctoSPI peripherals)
