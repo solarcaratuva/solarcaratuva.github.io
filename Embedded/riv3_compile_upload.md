@@ -7,7 +7,7 @@ has_children: false
 
 # Compiling
 
-[Rivanna3 GitHub Link](https://github.com/solarcaratuva/Rivanna3)
+[Rivanna3S GitHub Link](https://github.com/solarcaratuva/Rivanna3S)
 
 **Software Installation**
 
@@ -26,35 +26,25 @@ Windows Users: do these steps within WSL using a WSL command prompt (type `wsl` 
     - Windows Users: When you first open WSL, the working directory will be `/mnt/c/Users/username`. This is inside your Windows filesystem. You should NOT make the folder here; if you do, compilation will be VERY slow. You should run `cd ~` to go to your Linux home directory and make the folder there; the path of the folder should be similar to `~/solarCarRepo` or `/home/username/solarCarRepo`. 
 2. Clone Rivanna3 into that directory using `git clone https://github.com/solarcaratuva/Rivanna3.git`
 3. Change directory into the cloned directory (`cd Rivanna3`)
-4. Run the following command: `docker run --name Rivanna3_compile -it -v $(pwd)/:/root/Rivanna2:Z ghcr.io/solarcaratuva/rivanna2-env`
-5. Run `cd Rivanna2` then `mbed-tools deploy`
+4. Run the following command: `python3 compile.py --install`
 
-**Actually Compiling: using the script option**
+**Actually Compiling**
 
 In the *Rivanna3* folder, run the compile script, `compile.py`. See the API below:
 
 Arguments: 
 - `-c`, `--clean`: flag, optional. Deletes previous build files before compiling, forcing the compiler to do a clean compile.
 - `-s`, `--silent`: flag, optional. Will stop the compile command from printing debug info and showing the progress bar.
+- `--install`: flag, optional. Will create the compilation Docker container. If the container already exists, deletes it first. 
 
 Example: `python3 compile.py -c`.
 
-Note that this script won't work if the container wasn't made with the `docker run...` command from above, or with old versions of Docker. 
-
-**Actually Compiling: manual option**
-
-1. Start the container by running `docker start Rivanna3_compile`
-1. Attach the command prompt to the container by running `docker attach Rivanna3_compile`
-    - Docker Desktop must be running
-2. Run `cd Rivanna2` then `./compile.sh`
-    - compilation should take under a minute
-
-Compiled files are stored in the `cmake_build` directory. Remember that this compiles the *current* Git branch only. 
+Compiled files are stored in the `build` directory. Remember that this compiles the *current* Git branch only. 
 
 **What is Actually Happening**
 
 1. A Docker container is an isolated space on your computer, only sharing foundational system files with the rest of the computer, as well as limited computational resources. The isolation of the container ensures that everyone has the EXACT same environment when compiling, which prevents phantom, often unsolvable errors from occurring.
-2. The `compile.sh` script runs `mbed-tools compile -m UVA_SOLAR_CAR -t GCC_ARM`, which uses MbedOS's own compilation system to compile the code.
+2. The compile script runs CMake commands in the Docker container. These commands use the rules in the `CMakeLists.txt` files to compile the code. 
 3. The compiled code is stored, ready for upload, and reducing the number of files needed to be compiled in the future.
 
 # Uploading
