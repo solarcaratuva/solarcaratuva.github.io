@@ -5,10 +5,19 @@ parent: Telemetry
 has_children: false
 ---
 
-# LTE Module
-[LTE ("Long Term Evolution")](https://www.digi.com/blog/post/what-is-lte) is an efficient and more optimized path to communicate cellular data across devices. During some Solar Car competitions, the team needs to stream telemetry data from the car to another device at the pit station, which requires long distance cellular communication. We're currently at work configuring and implementing a [Digi XBee LTE Module](https://www.digi.com/products/embedded-systems/digi-xbee/cellular-modems/digi-xbee-3-global-lte-m-nb-iot) into our car to enable this feature.  
+During Solar Car competitions, the team needs to stream telemetry data from the car to another device at the pit station, which requires long distance cellular communication. We're currently at work configuring and implementing a [Digi XBee LTE Module](https://www.digi.com/products/embedded-systems/digi-xbee/cellular-modems/digi-xbee-3-global-lte-m-nb-iot) into our car to enable this feature.
 
-**Project Status:** We have configured the LTE module and observed it connecting to the cellular network, albeit intermittently while indoors. We also created and successfully executed MicroPython scripts that send messages from the LTE Module to an Amazon Web Services (AWS) Dynamo database. Currently, the LTE team is looking into how to receive CANMessage C-Structs from the embedded Solar Car system and convert them to JSONs that the LTE can send to AWS DynamoDB.
+# What is LTE?
+You ever wonder why your smartphone sometimes displays the letters "LTE" by the top-right data bars? It's likely because the cellular network conntected to your phone has swapped to (or currently uses) the 4G LTE cellular network!
+
+*Add picture here*
+
+[LTE ("Long Term Evolution")](https://www.digi.com/blog/post/what-is-lte) is a technology providing an efficient, optimized pathway to communicate cellular data across devices. Its often referred as 4G LTE, becauses it's part of the 4th cellular network generation. Essentially, "generations" divide and organize the gradual improvement of the cellular network by decade, with each generation significantly improving upon the latency (time delay of data transmission), bandwidth (data transfer rate), and other features from the previous decade.
+
+For instance, 5G is the current cellular generation for the 2020s, and it features ultra-low latency (1-4 ms) and high bandwidth (up to 20 Gbps). Being the previous generation, 4G LTE has more latency and less bandwidth than 5G, but it does have better coverage and reliability. If your phone typically runs on 5G, it may swap to the 4G LTE network if the 5G signal is weak/unavailable in your area. 
+
+An LTE module is a hardware component that connects devices to the 4G LTE cellular network for data transmission. The particular LTE module we're using is the [Digi XBee 3 Global and Low-Power LTE-M/NB-IoT](https://www.digi.com/products/embedded-systems/digi-xbee/cellular-modems/digi-xbee-3-global-lte-m-nb-iot).
+
 
 
 ## Setup Resources
