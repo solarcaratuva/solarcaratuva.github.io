@@ -4,7 +4,7 @@ nav_order: 11
 parent: Embedded
 has_children: false
 ---
-# 2025 Embedded Onboarding
+# 2026 Spring Embedded Onboarding
 
 **Welcome to the Solar Car Team and the Embedded Subteam!** Onboarding will consist of the following action items. Complete them in this order: 
 1. downloading and configuring software
@@ -14,7 +14,9 @@ has_children: false
 
 This page will serve as the hub for onboarding, similar to how this wiki is a hub for the Embedded Subteam's info. You should familiarize yourself with the guides and datasheets in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html), so you know what is available there. 
 
-For the first month or so, PowerPoints will be presented at the start of the Sunday meetings to help bring new members up to speed. The goal of these presentations is not to teach new members everything they will need, but rather create a foundation so new members know how things work in general and know what questions to ask. These will be posted in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html) afterwards. 
+~~For the first month or so, PowerPoints will be presented at the start of the Sunday meetings to help bring new members up to speed. The goal of these presentations is not to teach new members everything they will need, but rather create a foundation so new members know how things work in general and know what questions to ask. These will be posted in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html) afterwards. ~~
+
+Read through all the PowerPoints in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html). They were updated for Fall 2025, but should still be up-to-date for everything EXCEPT FreeRTOS. The PowerPoints describe MbedOS, which was the real time operating system the team used up until 2025-2026. We are using FreeRTOS now, but all the concepts described for MbedOS are still relevant. 
 
 New members should research the basics of C++ and Python if they are unfamiliar with these programming languages. Here are some helpful resources:
 - [C++ Basics](https://www.w3schools.com/cpp/default.asp)
@@ -33,6 +35,7 @@ New members should research the basics of C++ and Python if they are unfamiliar 
         git config --global user.name "Your Name"
         git config --global user.email "your.email@example.com"
         ```
+7. For the onboarding project, you will be working in the 2024-2025 codebase, *Rivanna3*. To setup the Docker container, follow the instructions in `compile_upload.md` in *Rivanna3*.
 
 ## Learning about Git
 
@@ -46,6 +49,8 @@ New members should research the basics of C++ and Python if they are unfamiliar 
 # Team Specific Learning
 
 In the [Development Guide](https://solarcaratuva.github.io/Embedded/riv3_dev_guide.html) read *Project Architecture* and *CAN*. Also skim through *Precharge* and *Cruise Control*. 
+
+Also read through the [common terms page](https://solarcaratuva.github.io/Embedded/common_terms.html)
 
 ## Onboarding Project
 

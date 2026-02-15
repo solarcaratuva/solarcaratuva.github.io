@@ -24,6 +24,8 @@ has_children: false
 - **GPIO** - General Purpose Input / Output pins, these pins are used to input and output digital signals
 - **3V3** - 3.3 volts, the voltage we interact with most of the time
 - **High, Low** - the voltage is at its maximum or minimum, used in reference to digital signals
+- **AD2**: An all-in-one electrical / embedded measurement and testing device. It uses Waveforms (AD2's software app) to interface with it.
+    - If you take ECE 2300 'Applied Circuits', this is the same device the course gives you
 
 ## Communication Protocols
 
