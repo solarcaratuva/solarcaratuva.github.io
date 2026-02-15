@@ -7,7 +7,7 @@ has_children: false
 
 During Solar Car competitions, the team needs to stream telemetry data from the car to another device at the pit station, which requires long distance cellular communication. We're currently at work configuring and implementing a [Digi XBee LTE Module](https://www.digi.com/products/embedded-systems/digi-xbee/cellular-modems/digi-xbee-3-global-lte-m-nb-iot) into our car to enable this feature.
 
-# What is LTE?
+## What is LTE?
 You ever wonder why your smartphone sometimes displays the letters "LTE" by the top-right data bars? It's likely because the cellular network conntected to your phone has swapped to (or currently uses) the 4G LTE cellular network!
 
 *Add picture here*
