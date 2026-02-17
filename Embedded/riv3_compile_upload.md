@@ -79,11 +79,11 @@ Example: `python3 upload.py power`
 A serial monitor, such as `monitor.py`, can be used to read debug log statements from the microcontrollers. 
 
 These log messages look like:
-```log
-00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x406 Length 6 Data 0x5b1e5e010000
-00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x200 Length 8 Data 0x0080010000000000
-00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x406 Length 6 Data 0x321f1e000000
-00:00:03 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 0x300 Length 1 Data 0x04
+```sh
+00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 406 Length 6 Data 0x5b1e5e010000
+00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 200 Length 8 Data 0x0080010000000000
+00:00:02 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 406 Length 6 Data 0x321f1e000000
+00:00:03 DEBUG /root/Rivanna2/Common/src/MainCANInterface.cpp:40: Sent CAN message with ID 300 Length 1 Data 0x04
 ```
 
 *Pyserial* must be installed, run `py -m pip install pyserial` to install. `monitor.py` should be run in WSL for Windows Users, but pyserial must be installed **on Windows**. 
