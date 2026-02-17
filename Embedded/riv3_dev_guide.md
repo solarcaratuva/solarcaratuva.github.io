@@ -44,7 +44,7 @@ These function all have standard `printf()` functionality, except for printing f
 
 To read log messages, connect your laptop to the board, and run `monitor.py`. Note that the log must be configured before it can be used. In the example below, it is set to the *info level*, meaning any lower levels (in this case, only debug) will not be logged. 
 
-```Cpp
+```cpp
 void app_main() {
     log_configure(INFO_LVL, LOG_TX, LOG_RX, 921600);
 
@@ -89,13 +89,13 @@ Our Messages are defined [here](https://github.com/solarcaratuva/CAN-messages). 
 
 Start off by defining a CAN Interface at the top of `main.cpp` for that board.
 
-```Cpp
+```cpp
 CanInterface main_can = CanInterface(CAN_TX, CAN_RX, 250000, CanNetwork::Main);
 ```
 
 To send a message, create a CAN struct of the specific message you are sending. Then call `.write()`
 
-```Cpp
+```cpp
 PedalStatus msg{};
 msg.throttle_pedal = 10;
 msg.brake_pedal = 0;
@@ -104,7 +104,7 @@ main_can.write(&msg);
 
 To receive a message, create a function that accepts a `const SerializedCanMessage` reference as the sole argument, and returns nothing. Note that you will want to deserialize `msg` immediately if you are doing anything with the structure of the CAN message's data. 
 
-```Cpp
+```cpp
  void handle_dashboard_commands(const SerializedCanMessage &msg) {
     DashboardCommands cmd{};
     cmd.deserialize(&msg);
@@ -115,7 +115,7 @@ To receive a message, create a function that accepts a `const SerializedCanMessa
 
 You must also register this function with the CAN Interface, so it knows to call the function when receiving a certain message type. This should be done in the `app_main()` function
 
-```Cpp
+```cpp
     main_can.register_callback(DashboardCommands::get_message_ID(), handle_dashboard_commands);
 ```
 
