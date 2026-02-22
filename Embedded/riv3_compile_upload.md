@@ -24,13 +24,13 @@ has_children: false
 Windows Users: do these steps within WSL using a WSL command prompt (type `wsl` into a command prompt to enter WSL)
 1. Make a folder for Solar Car code on your machine, if not done already, and `cd` into it
     - Windows Users: When you first open WSL, the working directory will be `/mnt/c/Users/username`. This is inside your Windows filesystem. You should NOT make the folder here; if you do, compilation will be VERY slow. You should run `cd ~` to go to your Linux home directory and make the folder there; the path of the folder should be similar to `~/solarCarRepo` or `/home/username/solarCarRepo`. 
-2. Clone Rivanna3 into that directory using `git clone https://github.com/solarcaratuva/Rivanna3.git`
-3. Change directory into the cloned directory (`cd Rivanna3`)
+2. Clone Rivanna3S into that directory using `git clone https://github.com/solarcaratuva/Rivanna3S.git`
+3. Change directory into the cloned directory (`cd Rivanna3S`)
 4. Run the following command: `python3 compile.py --install`
 
 **Actually Compiling**
 
-In the *Rivanna3* folder, run the compile script, `compile.py`. See the API below:
+In the *Rivanna3S* folder, run the compile script, `compile.py`. See the API below:
 
 Arguments: 
 - `-c`, `--clean`: flag, optional. Deletes previous build files before compiling, forcing the compiler to do a clean compile.
@@ -58,9 +58,9 @@ Compiled files are stored in the `build` directory. Remember that this compiles 
 
 **Actually Uploading**
 
-1. Open the *Rivanna3* folder
+1. Open the *Rivanna3S* folder
     - Windows Users: this should be stored in WSL; open in WSL, not through the Windows file explorer
-2. In the *Rivanna3* folder, run the upload script, `upload.py`. See the API below:
+2. In the *Rivanna3S* folder, run the upload script, `upload.py`. See the API below:
 
 Arguments:
 - `board`: positional, required argument. Specifies which board you are uploading to.

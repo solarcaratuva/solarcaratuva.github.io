@@ -19,6 +19,7 @@ has_children: false
 
 ## Hardware Components
 
+- **Microcontroller, MCU** - a small, resource constrained, embedded computer that our embedded code runs on
 - **STM chip** - one of the microcontrollers we use, made by ST Microelectronics
 - **ST-Link** - the physical device used to upload code
 - **GPIO** - General Purpose Input / Output pins, these pins are used to input and output digital signals

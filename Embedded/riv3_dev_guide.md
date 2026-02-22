@@ -90,7 +90,7 @@ Our Messages are defined [here](https://github.com/solarcaratuva/CAN-messages). 
 Start off by defining a CAN Interface at the top of `main.cpp` for that board.
 
 ```cpp
-CanInterface main_can = CanInterface(CAN_TX, CAN_RX, 250000, CanNetwork::Main);
+CanInterface main_can = CanInterface(CAN_TX, CAN_RX, CAN_STANDBY, 250000, CanNetwork::Main);
 ```
 
 To send a message, create a CAN struct of the specific message you are sending. Then call `.write()`
