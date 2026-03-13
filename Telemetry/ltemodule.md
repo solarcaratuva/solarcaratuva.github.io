@@ -10,7 +10,7 @@ During Solar Car competitions, the team needs to stream telemetry data from the 
 ## What is LTE?
 You ever wonder why your smartphone sometimes displays the letters "LTE" by the top-right data bars? It's likely because the cellular network conntected to your phone has swapped to (or currently uses) the 4G LTE cellular network!
 
-*Add picture here*
+![LTE Icon on iPhone](/assets/images/phoneLTE.jpg)
 
 [LTE ("Long Term Evolution")](https://www.digi.com/blog/post/what-is-lte) is a technology providing an efficient, optimized pathway to communicate cellular data across devices. Its often referred as 4G LTE, becauses it's part of the 4th cellular network generation. Essentially, "generations" divide and organize the gradual improvement of the cellular network by decade, with each generation significantly improving upon the latency (time delay of data transmission), bandwidth (data transfer rate), and other features from the previous decade.
 
