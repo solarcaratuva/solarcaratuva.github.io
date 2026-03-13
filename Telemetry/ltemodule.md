@@ -27,6 +27,18 @@ For hardware, we have a Digi Xbee LTE Module, a Digi XBee Development Board, a S
 - [Tutorial Documentation for XBee LTE Module](https://docs.digi.com/resources/documentation/digidocs/90002420/#containers/cont_getting_started.htm?TocPath=Get%2520started%2520with%2520the%2520XBee%257C_____0)
   - [Tutorial Documentation for Micropython Programming](https://docs.digi.com/resources/documentation/digidocs/90002219/)
 
-Here are some software that may be required to develop the LTE Module:
-- [XCTU](https://hub.digi.com/support/products/xctu/?_gl=1*10gir5s*_gcl_au*NjEzNzMwNzY3LjE3NDMxODU5ODA.*_ga*MTc2ODM4NDU0MC4xNzQzMTg1OTgw*_ga_RZXDK3PM3B*MTc0MzE5Njk5Mi4yLjEuMTc0MzE5OTcyNC42MC4wLjEyOTMxODUzMzQ): traditional software used to configure settings, run commands, and implement scripts on the LTE Module and other XBee devices.
-- [Digi XBee Studio](https://www.digi.com/products/embedded-systems/digi-xbee/digi-xbee-tools/digi-xbee-studio): application for monitoring, configuring, and testing the XBee LTE Module (though hasn't been used that frequently). 
+Here are some software for utilizing the LTE Module:
+- [XCTU](https://hub.digi.com/support/products/xctu/?_gl=1*10gir5s*_gcl_au*NjEzNzMwNzY3LjE3NDMxODU5ODA.*_ga*MTc2ODM4NDU0MC4xNzQzMTg1OTgw*_ga_RZXDK3PM3B*MTc0MzE5Njk5Mi4yLjEuMTc0MzE5OTcyNC42MC4wLjEyOTMxODUzMzQ): main software we use to configure settings, run commands, and implement scripts on the LTE Module and other XBee devices.
+- [Digi XBee Studio](https://www.digi.com/products/embedded-systems/digi-xbee/digi-xbee-tools/digi-xbee-studio): application for monitoring, configuring, and testing the XBee LTE Module (though hasn't been used that frequently).
+
+
+
+## How to use XCTU
+
+For the following tutorials, you will need to have XCTU installed on your computer as well as the physical XBee LTE Module kit, including the module itself, a spare antenna, and a micro-USB to USB-A cable (if your computer doesn't have a USB-A port, you may need to find a different cable or adapter).
+
+### Discovering the LTE Module in XCTU
+
+### Uploading files into the LTE Module
+
+### Running MicroPython script on the LTE Module
