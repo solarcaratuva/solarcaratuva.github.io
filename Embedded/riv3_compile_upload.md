@@ -66,7 +66,7 @@ Arguments:
 - `board`: positional, required argument. Specifies which board you are uploading to.
 - `-s`, `--silent`: flag, optional. Will stop the upload command from printing debug info and showing the progress bar.
 
-Example: `python3 upload.py power`
+Example: `python3 upload.py motor`
 
 **What is Actually Happening**
 
@@ -88,7 +88,8 @@ These log messages look like:
 
 *Pyserial* must be installed, run `py -m pip install pyserial` to install. `monitor.py` should be run in WSL for Windows Users, but pyserial must be installed **on Windows**. 
 The script has the following arguments:
-- `-l`, `--log`: flag, optional. The flag should be followed by a file path. Logs all messages to the file, creates the file if it doesn't exist, appends if it does exist.
+- `l`, `--level`: flag, optional. This flag should be followed by one of {debug, info, warn, fault}. All messages below that level will not be shown. By default, all messages are shown (debug level)
+- `-s`, `--save`: flag, optional. The flag should be followed by a file path. Logs all messages to the file, creates the file if it doesn't exist, appends if it does exist.
 - `-f`, `--filter`: flag, optional. Filter out messages without this string, use '\|' to separate multiple strings
 
-Example: `python3 monitor.py -l logfile.log -f CAN`
+Example: `python3 monitor.py -s logfile.log -f CAN`

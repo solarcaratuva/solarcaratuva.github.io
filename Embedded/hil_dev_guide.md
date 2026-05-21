@@ -5,9 +5,9 @@ parent: Embedded
 has_children: false
 ---
 
-# Hardware-in-Loop Testing Development Guide
+# Hardware-in-the-Loop Testing Development Guide
 
-*This page serves as the main guide for UVA Solar Car Team's Hardware-in-Loop (HIL) testing system. Here, we will provide a description of it's implementation and how to use it.* 
+*This page serves as the main guide for UVA Solar Car Team's Hardware-in-the-Loop (HIL) testing system. Here, we will provide a description of it's implementation and how to use it.* 
 
 [Hardware-in-Loop Testing GitHub Link](https://github.com/solarcaratuva/HiL_Testing)
 

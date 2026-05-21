@@ -5,11 +5,24 @@ parent: Embedded
 has_children: false
 ---
 
+**Table of Contents**
+- [Rivanna3S Development Guide](#rivanna3s-development-guide)
+    - [Project Architecture](#project-architecture)
+    - [Logging / Printing](#logging--printing)
+    - [CAN](#can)
+    - [Precharge](#precharge)
+    - [Cruise Control](#cruise-control)
+- [PhotonicOS](#photonicos)
+    - [What is included in PhotonicOS](#what-is-included-in-photonicos)
+    - [Adding new features](#adding-new-features)
+    - [Adding a new board](#adding-a-new-board)
+    - [Adding support for new microcontrollers](#adding-support-for-new-microcontrollers)
+
+
 # Rivanna3S Development Guide
 
 This page is the main source for explanations about development decisions, and how implemented logic is meant to work at a high-level, for the Rivanna3S Embedded Codebase
 
-For explanation on the underlying embedded real-time operating system, see the [PhotonicOS page](https://solarcaratuva.github.io/Embedded/photonic_os.html)
 
 [Rivanna3S GitHub Link](https://github.com/solarcaratuva/Rivanna3S)
 
@@ -129,11 +142,9 @@ The current CAN networks are as follows:
 ![CAN Diagram](/assets/images/Embedded/CAN_diagram.png)
 
 - Main CAN - almost everything is attached to this network, when people say 'the CAN network' they mean main CAN
-- Motor CAN - connects the motor controller and the PowerBoard
+- Motor CAN - connects the motor controller and the MotorBoard
 
 ## Precharge
-
-TODO: update for Rivanna3S, current info is from Rivanna3
 
 Precharge is a system used on the high-voltage part of the car's electrical system to prevent [inrush current](https://en.wikipedia.org/wiki/Inrush_current). This section refers to the motor, but also applies to the MPPTs as well. Precharge logic and hardware is managed by the *Power Subteam*; *Embedded* only implements the logic in software.
 
@@ -152,24 +163,90 @@ The solution: Add another resistor in series to increase the time constant, and 
 **Normal Logic**
 
 1. Wait until *contactor 12* rising edge. 
-2. Wait until *discharge_relay_status* is high (this signal is sent by the BMS over CAN in the *BPSPackInformation* message).
+2. Wait until *discharge_relay_status* is high (this signal is sent by the BMS over CAN in the *BPSStatus* message).
 3. Close (enable) *motor precharge enable*.
-4. Wait until *discharge RC voltage* is greater than 95% of *pack_voltage* (this signal is sent by the BMS over CAN in the *BPSPackInformation* message).
+4. Wait until *discharge RC voltage* is greater than 95% of *pack_voltage* (this signal is sent by the BMS over CAN in the *BPSStatus* message).
 5. Close (enable) *discharge contactor*, wait a small delay, open (disable) *motor precharge enable*.
+
+This logic is implemented in the finite state machine (FSM) in `RelayBoard/Src/Precharge.cpp`.
 
 Note that the process as described is for motor precharge, but MPPT precharge is the same process, just with *discharge* and *motor* variables replaced with *charge* and *MPPT* variables. Both motor and MPPT precharge processes happen concurrently and independently. 
 
 **Fault Logic**
 
-If at any time (before, during, or after precharge) *contactor 12* has a falling edge or a fault occurs elsewhere, then open (disable) the *charge* and *discharge contactor* and the *motor* and *MPPT precharge enable* relays. 
+If at any time (before, during, or after precharge) *contactor 12* has a falling edge or a fault occurs elsewhere, then open (disable) the *charge* and *discharge contactor* and the *motor* and *MPPT precharge enable* relays. Contactor 12 falling edge or many faults in the *BPSError* CAN message should also cause the BMS strobe light to flash. 
 
 
 ## Cruise Control
 
-TODO: update for Rivanna3S, current info is from Rivanna3
-
-Cruise control is a common car feature that makes the car drive at a constant speed. For Rivanna3S, cruise control is implemented using the [PID Algorithm](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller). PID works by setting the output of the motor based on 3 constants. The PID constants can be found in `PowerBoard/lib/include/CruiseControl.h`. These should be tuned if cruise control is not effectively reaching the target speed. See [PID without a PHD](https://web2.qatar.cmu.edu/~gdicaro/16311-Fall17/slides/PID-without-PhD.pdf) for more information on tuning and PID theory.
+Cruise control is a common car feature that makes the car drive at a constant speed. For Rivanna3S, cruise control is implemented using the [PID Algorithm](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller). PID works by setting the output of the motor based on 3 constants. The PID constants can be found in `Motorboard/Inc/CruiseControl.h`. These should be tuned if cruise control is not effectively reaching the target speed. See [PID without a PHD](https://web2.qatar.cmu.edu/~gdicaro/16311-Fall17/slides/PID-without-PhD.pdf) for more information on tuning and PID theory.
 
 **Driver Usage**
 
-The cruise control target speed can be changed by the driver. There are buttons that increase, decrease, and toggle cruise control. Cruise up / down change the target speed by a constant set in `PowerBoard/lib/include/CruiseControl.h`, which is currently set to 5mph.
+The cruise control target speed can be changed by the driver. There are buttons that increase, decrease, and toggle cruise control. Cruise up / down change the target speed by a constant set in `Motorboard/Inc/CruiseControl.h`, which is currently set to 5mph.
+
+
+
+
+# PhotonicOS
+
+![PhotonicOS Logo](/assets/images/Embedded/PhotonicOS%20Logo.jpeg)
+
+PhotonicOS is the name for the custom real-time embedded operating system that the *Embedded Subteam* began developing in 2025. The OS sits between our application-level code and the physical hardware drivers. It provides support for multithreading, easier to use drivers, and more. 
+
+The team previously used [MbedOS](https://os.mbed.com/mbed-os/), but chose to leave it after it reached end of life, and we bought hardware (the screen in the steering wheel) that MbedOS does not support. 
+
+## What is included in PhotonicOS
+
+**Kernel**: We use the [FreeRTOS](https://www.freertos.org/Documentation/00-Overview) kernel. It provides support for multithreading and concurrency utilities. We created high level C++ wrappers to wrap around the features we use to provide a nicer interface.
+
+**Drivers**: The manufacturer of our microcontrollers, [STM](https://www.st.com/content/st_com/en.html), provides *STM HAL drivers*, which are C drivers that control the physical hardware. We wrap around these drivers with our own high-level C++ drivers. The key benefit of our C++ drivers, besides creating a nicer object-oriented interface, is peripheral initialization. Through files such as `peripheralmap.cpp`, application code must only provide the pins of a peripheral instead of the peripheral number itself when initializing a peripheral; this automates the process of determining which peripheral instance supports the pins the programmer wants to use. 
+
+**File System**: a file system only exists on the logging SD card. We use [FatFS](https://en.wikipedia.org/wiki/FatFs) for this. 
+
+**Devops**: there are multiple Python scripts we have to ease development operations: `upload.py` to abstract flashing code to a microcontroller, `compile.py` to abstract the compilation system, `monitor.py` to read log data from the microcontroller, and code generation scripts.
+
+## Adding new features
+
+**Not hardware related**: (example: adding a class to process data) <br>
+If this library will only be used by a specific board, put the code in that board's folder, otherwise put it in `Common/Libs/`.
+
+**Hardware related**: (example: adding support for OctoSPI peripherals)
+1. Find the STM HAL driver for the new peripheral.
+2. Write a C++ wrapper for the peripheral in `Common/drivers/`, and make sure to update `peripheralmap.{cpp,h}` as needed to handle looking up which pins are associated with which instance of the peripheral.
+3. Test
+4. Update the code generations scripts in `Drivers/code_generation/` to handle the new peripheral.
+5. Follow the steps in "Adding support for new microcontrollers" below to regenerate driver code for all microcontrollers, to ensure all microcontroller can run your new code.
+
+## Adding a new board
+
+Example: creating a new board called *MiddleBoard*, which will use an already supported microcontroller.
+
+1. Add the following files to the repo
+  - `MiddleBoard/Inc/pindef.h`: pin mappings
+  - `MiddleBoard/Src/main.cpp`: application code, remember to have an `app_main()` function defined here
+  - `MiddleBoard/CMakeLists.txt`: compilation configuration, can be largely copied from other boards
+2. Add *MiddleBoard* and the location of its compiled `.elf` file to the `BOARD_MAP` dictionary in `upload.py`
+
+## Adding support for new microcontrollers 
+
+Example: adding support for the STM32xyzABCx microcontroller
+
+**Warning**: PhotonicOS was designed for exclusive use with STM32 microcontrollers. Adding support for other brands of microcontrollers will be a lot of work!
+
+1. Install [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)
+2. Create a new project for the *STM32xyzABCx* microcontroller, then open the `{project name}.ioc` file
+3. Enable all the peripherals the team uses (ex. UART, I2C, SPI)
+  - note that UART, USART, and LPUART are functionally the same and can be used interchangeably while I2S is not I2C and QuadSPI or OctoSPI is not SPI
+  - for the ADCs, only 1 channel needs to be enabled. If given the option to choose between double- or single-ended, choose single-ended
+4. If you see a red symbol next to the *Clock Configuration* tab click that and follow these instructions
+  - In the middle-left of the page, your goal is to set the `PLLQ` and `PLLP` clocks. Change the dividers and multipliers until both values are 40 (MHz). Depending on the microcontroller size, there might be multiple PLLQs and PLLPs
+  - Set all the peripherals the team uses to use one of these clocks. Each peripheral has a different range of acceptable clock speeds, but all peripherals seem to accept 40 MHz as valid. 
+5. Open the *Project Manager* tab and make these changes
+  - in *Code Generation*, check *Generate peripheral initialization as a pair of .c/.h files per peripheral*
+6. Save the file, which will then autogenerate the needed files
+  - you can ignore the warnings given before generating code
+7. See `Drivers/code_generation/Readme.md` to finish. The scripts it describes will import the files that STM32CubeIDE generated and make automatic changes to them so they work with the rest of our codebase
+8. You will likely need to adjust the time source for FreeRTOS and maybe HAL. This involves adjusting some interrupts; its probably better to let AI do this since it can vary a lot. 
+    - if both are working, then you should be able to blink a light from `app_main()` without issue
+    - to test if HAL time is setup correctly, add code to `Common/startup.cpp` to flash a LED. Add a while loop to do this AFTER `startup_init()` but before `vTaskStartScheduler()`, and use `HAL_Delay(1000)` as the sleep function. If the light flashes, then HAL timebase is set properly. If it turns on but doesn't flash, then the HAL timebase is not properly set. If nothing happens, then you probably made a mistake elsewhere.

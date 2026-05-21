@@ -40,8 +40,6 @@ This program generates mock CAN messages for debugging.
 [Hardware-in-loop testing](https://github.com/solarcaratuva/HiL_Testing) <br>
 This project is the code for a test server used to thoroughly test the Embedded Codebase. The testing server emulates all the inputs into the physical testing board, and analyzes the outputs to determine if the code is working correctly. 
 
-TODO: Fall 2024 - Fall 2025 project
-
 [Onboarding Installer Script](https://github.com/solarcaratuva/Onboarding_Installer) <br>
 This script downloads, installs, and configures the necessary software stack to develop, compile, and upload our embedded code to the car. DOES NOT CURRENTLY WORK. 
 
