@@ -234,8 +234,10 @@ Example: adding support for the STM32xyzABCx microcontroller
 
 **Warning**: PhotonicOS was designed for exclusive use with STM32 microcontrollers. Adding support for other brands of microcontrollers will be a lot of work!
 
+
 [This video walkthrough](https://drive.google.com/file/d/12WX7Oa2rYYOXa-L1aNPQiD8m5F4G1f_U/view?usp=sharing) covers steps 2 through 7 below.
-- CORRECTION: step 4 below was missed 
+  - CORRECTION: step 4 below was missed 
+
 
 1. Install [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)
   - sign in with your myST account
