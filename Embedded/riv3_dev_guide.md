@@ -234,19 +234,24 @@ Example: adding support for the STM32xyzABCx microcontroller
 
 **Warning**: PhotonicOS was designed for exclusive use with STM32 microcontrollers. Adding support for other brands of microcontrollers will be a lot of work!
 
+[This video walkthrough](https://drive.google.com/file/d/12WX7Oa2rYYOXa-L1aNPQiD8m5F4G1f_U/view?usp=sharing) covers steps 2 through 7 below.
+- CORRECTION: step 4 below was missed 
+
 1. Install [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)
+  - sign in with your myST account
 2. Create a new project for the *STM32xyzABCx* microcontroller, then open the `{project name}.ioc` file
 3. Enable all the peripherals the team uses (ex. UART, I2C, SPI)
   - note that UART, USART, and LPUART are functionally the same and can be used interchangeably while I2S is not I2C and QuadSPI or OctoSPI is not SPI
   - for the ADCs, only 1 channel needs to be enabled. If given the option to choose between double- or single-ended, choose single-ended
-4. If you see a red symbol next to the *Clock Configuration* tab click that and follow these instructions
+4. Enable FreeRTOS in *Pinout & Configuration* >> *Middlewares and Software* >> *FREERTOS* >> *CMSIS_V2*. Then change the HAL timebase to another timer in *System Core* >> *SYS* >> *Timebase Source* >> *TIM1*.
+5. If you see a red symbol next to the *Clock Configuration* tab click that and follow these instructions
   - In the middle-left of the page, your goal is to set the `PLLQ` and `PLLP` clocks. Change the dividers and multipliers until both values are 40 (MHz). Depending on the microcontroller size, there might be multiple PLLQs and PLLPs
   - Set all the peripherals the team uses to use one of these clocks. Each peripheral has a different range of acceptable clock speeds, but all peripherals seem to accept 40 MHz as valid. 
-5. Open the *Project Manager* tab and make these changes
+6. Open the *Project Manager* tab and make these changes
   - in *Code Generation*, check *Generate peripheral initialization as a pair of .c/.h files per peripheral*
-6. Save the file, which will then autogenerate the needed files
+7. Save the file, which will then autogenerate the needed files
   - you can ignore the warnings given before generating code
-7. See `Drivers/code_generation/Readme.md` to finish. The scripts it describes will import the files that STM32CubeIDE generated and make automatic changes to them so they work with the rest of our codebase
-8. You will likely need to adjust the time source for FreeRTOS and maybe HAL. This involves adjusting some interrupts; its probably better to let AI do this since it can vary a lot. 
+8. See `Drivers/code_generation/Readme.md` to finish. The scripts it describes will import the files that STM32CubeIDE generated and make automatic changes to them so they work with the rest of our codebase
+9. You will likely need to adjust the time source for FreeRTOS and maybe HAL. This involves adjusting some interrupts; its probably better to let AI do this since it can vary a lot. 
     - if both are working, then you should be able to blink a light from `app_main()` without issue
     - to test if HAL time is setup correctly, add code to `Common/startup.cpp` to flash a LED. Add a while loop to do this AFTER `startup_init()` but before `vTaskStartScheduler()`, and use `HAL_Delay(1000)` as the sleep function. If the light flashes, then HAL timebase is set properly. If it turns on but doesn't flash, then the HAL timebase is not properly set. If nothing happens, then you probably made a mistake elsewhere.
