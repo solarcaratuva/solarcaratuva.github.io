@@ -25,6 +25,6 @@ Note that every project has an associated `Readme.md` in its repo that explains 
 
 ## Meeting Times
 
-**Sunday Meetings**: Every Sunday from 2pm to 5pm during the 2025-2026 school year we will meet at the Reactor, unless otherwise specified. Everyone is expected to attend, and should notify the Embedded Lead if they can't attend that week. 
+**Sunday Meetings**: Every Sunday from 2pm to 4pm during the 2026-2027 school year we will meet at the Reactor, unless otherwise specified. Everyone is expected to attend, and should notify the Embedded Lead if they can't attend that week. 
 
 **Midweek Meetings**: Many weeks will have a shorter meeting during the week. These will be scheduled as needed, varying from week to week, and will be at the Reactor unless otherwise specified. Attendance is encouraged but not required.

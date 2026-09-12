@@ -14,7 +14,9 @@ has_children: false
 
 This page will serve as the hub for onboarding, similar to how this wiki is a hub for the Embedded Subteam's info. You should familiarize yourself with the guides and datasheets in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html), so you know what is available there. 
 
-Read through all the PowerPoints in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html). They were updated for Fall 2025, but should still be up-to-date for everything EXCEPT FreeRTOS. The PowerPoints describe MbedOS, which was the real time operating system the team used up until 2025-2026. We are using FreeRTOS now, but all the concepts described for MbedOS are still relevant. 
+Read through all the PowerPoints in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html). 
+
+Documentation prior to and up to Fall 2025 explains MbedOS, the real time operating system used for Rivanna3 until 2025-2026. MbedOS is now deprecated in favor of FreeRTOS, so that documentation is up-to-date for everything EXCEPT FreeRTOS, though all the concepts described for MbedOS are still relevant. 
 
 New members should research the basics of C++ and Python if they are unfamiliar with these programming languages. Here are some helpful resources:
 - [C++ Basics](https://www.w3schools.com/cpp/default.asp)

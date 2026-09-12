@@ -7,11 +7,14 @@ has_children: false
 # Documentation
 
 ## PowerPoints
-- [Fall 2025 Opening Meeting](https://drive.google.com/file/d/1uL4oHC14J2hsjwdwuVNNaqUK9ywWVHsV/view?usp=sharing)
-- [Software Tools Stack](https://drive.google.com/file/d/1VwHsjI9-XFM50LPk8-GlVQ2b1mSVnLBM/view?usp=sharing) - covers Git, Shell Commands, VS Code, Docker, WSL, USBIPD, Compilation, Uploading, Serial Monitor, Static Analyzer
-- [C++ and MbedOS Part 1](https://drive.google.com/file/d/1QAUXzqpG1DN2jFjan19oo0R0Ie37fNhd/view?usp=sharing) - covers data types, operators, control structures, constants, functions, structs, defines, header files, GPIO pins, printing to the terminal, threads
-- [C++ and MbedOS Part 2](https://drive.google.com/file/d/18tUmglmR_fF27RsNv3A0bhXJDInmWP4F/view?usp=sharing) - covers casting, pointers, references, arrays, interrupts, event queue, CAN, code standards
-- [Python](https://drive.google.com/file/d/104BX9rL39ahvjgLBjNWVAg06n2apQNfb/view?usp=sharing) - covers running python programs, control structures, data structures, code standards, pip, virtual environments, os, sys, threading, subprocess, pyserial, re, atexit, fstrings
+### 2026-2027
+
+### 2025-2026
+- [Fall 2025 Opening Meeting](https://drive.google.com/file/d/17Fkwh_GcpxQfD5jpAt4F7-WUCZSC4DUC/view?usp=sharing)
+- [Software Tools Stack](https://drive.google.com/file/d/1fU3Yd3YEMsxh3j3NZE4fhSAEqXsOTHHc/view?usp=sharing) - covers Git, Shell Commands, VS Code, Docker, WSL, USBIPD, Compilation, Uploading, Serial Monitor, Static Analyzer
+- [C++ and MbedOS Part 1](https://drive.google.com/file/d/1-YWCCnX8lrClwG-jQd2kGDBe5IhrDI5O/view?usp=sharing) - covers data types, operators, control structures, constants, functions, structs, defines, header files, GPIO pins, printing to the terminal, threads
+- [C++ and MbedOS Part 2](https://drive.google.com/file/d/1pIzlwUykND21sLKW9uZzopfV5Dliw0l2/view?usp=sharing) - covers casting, pointers, references, arrays, interrupts, event queue, CAN, code standards
+- [Python](https://drive.google.com/file/d/1FVelcQS2s3Odfh8wv0hIygno7f_aqBPy/view?usp=sharing) - covers running python programs, control structures, data structures, code standards, pip, virtual environments, os, sys, threading, subprocess, pyserial, re, atexit, fstrings
 
 ## Datasheets
 - [STM32G473 MCU](https://drive.google.com/file/d/1JZ41cACIANuE3BXey5xjTEt2_om3fG5V/view?usp=sharing)
