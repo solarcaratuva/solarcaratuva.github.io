@@ -8,6 +8,10 @@ has_children: false
 
 ## PowerPoints
 ### 2026-2027
+- [Software Tools Stack](https://drive.google.com/file/d/1fU3Yd3YEMsxh3j3NZE4fhSAEqXsOTHHc/view?usp=sharing) - covers Git, Shell Commands, VS Code, Docker, WSL, USBIPD, Compilation, Uploading, Serial Monitor, Static Analyzer
+- [C++ and FreeRTOS Part 1](https://docs.google.com/presentation/d/15sbTTtwS-Qv_yRxUovxniCZ_FG4a9G5j/edit?usp=sharing&ouid=102016149371511444471&rtpof=true&sd=true) - covers data types, operators, control structures, constants, functions, structs, defines, header files, GPIO pins, printing to the terminal, threads
+- [C++ and FreeRTOS Part 2](https://docs.google.com/presentation/d/1BlpB9kq2EXcFeN9R5NWNqXFuQgLncVXg/edit?usp=sharing&ouid=102016149371511444471&rtpof=true&sd=true) - covers casting, pointers, references, arrays, interrupts, event queue, CAN, code standards
+- [Python](https://drive.google.com/file/d/1FVelcQS2s3Odfh8wv0hIygno7f_aqBPy/view?usp=sharing) - covers running python programs, control structures, data structures, code standards, pip, virtual environments, os, sys, threading, subprocess, pyserial, re, atexit, fstrings
 
 ### 2025-2026
 - [Fall 2025 Opening Meeting](https://drive.google.com/file/d/17Fkwh_GcpxQfD5jpAt4F7-WUCZSC4DUC/view?usp=sharing)
