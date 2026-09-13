@@ -6,7 +6,10 @@ has_children: false
 ---
 # Documentation
 
+Documentation prior to and up to Fall 2025 explains MbedOS, the real time operating system used for Rivanna3 until 2025-2026. MbedOS is now deprecated in favor of FreeRTOS, which is covered in the updated (2026-2027) documentation. 
+
 ## PowerPoints
+
 ### 2026-2027
 - [Software Tools Stack](https://drive.google.com/file/d/1fU3Yd3YEMsxh3j3NZE4fhSAEqXsOTHHc/view?usp=sharing) - covers Git, Shell Commands, VS Code, Docker, WSL, USBIPD, Compilation, Uploading, Serial Monitor, Static Analyzer
 - [C++ and FreeRTOS Part 1](https://docs.google.com/presentation/d/15sbTTtwS-Qv_yRxUovxniCZ_FG4a9G5j/edit?usp=sharing&ouid=102016149371511444471&rtpof=true&sd=true) - covers data types, operators, control structures, constants, functions, structs, defines, header files, GPIO pins, printing to the terminal, threads

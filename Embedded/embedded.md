@@ -11,7 +11,7 @@ The Embedded subteam designs, implements, and tests the embedded code that monit
 ## Quick Links
 
 - [**Team GitHub Organization**](https://github.com/orgs/solarcaratuva/repositories)
-- [**GitHub Project Taskboard 2025-2026**](https://github.com/orgs/solarcaratuva/projects/11)
+- [**GitHub Project Taskboard 2026-2027**](https://github.com/orgs/solarcaratuva/projects/20/views/5)
 - [**Rivanna3 Repo**](https://github.com/solarcaratuva/Rivanna3)
 - [**Rivanna3S Repo**](https://github.com/solarcaratuva/Rivanna3S)
 

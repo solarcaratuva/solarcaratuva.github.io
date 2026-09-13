@@ -4,7 +4,7 @@ nav_order: 11
 parent: Embedded
 has_children: false
 ---
-# 2026 Spring Embedded Onboarding
+# 2026 Fall Embedded Onboarding
 
 **Welcome to the Solar Car Team and the Embedded Subteam!** Onboarding will consist of the following action items. Complete them in this order: 
 1. downloading and configuring software
@@ -16,7 +16,7 @@ This page will serve as the hub for onboarding, similar to how this wiki is a hu
 
 Read through all the PowerPoints in [Documentation](https://solarcaratuva.github.io/Embedded/documentation.html). 
 
-Documentation prior to and up to Fall 2025 explains MbedOS, the real time operating system used for Rivanna3 until 2025-2026. MbedOS is now deprecated in favor of FreeRTOS, so that documentation is up-to-date for everything EXCEPT FreeRTOS, though all the concepts described for MbedOS are still relevant. 
+Documentation prior to and up to Fall 2025 explains MbedOS, the real time operating system used for Rivanna3 until 2025-2026. MbedOS is now deprecated in favor of FreeRTOS, which is covered in the updated (2026-2027) documentation. 
 
 New members should research the basics of C++ and Python if they are unfamiliar with these programming languages. Here are some helpful resources:
 - [C++ Basics](https://www.w3schools.com/cpp/default.asp)
