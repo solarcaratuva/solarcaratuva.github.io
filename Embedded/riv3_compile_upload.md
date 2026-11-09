@@ -98,6 +98,8 @@ Arguments:
 
 Example: `python3 transmit_stm.py topdist`
 
+Example (Explicit firmware file): `python3 transmit_stm.py topdist --file path/to/TopDistBoard.bin`
+
 **Board-to-board delivery is mocked as of now and is not functional.**
 
 **What is Actually Happening**
