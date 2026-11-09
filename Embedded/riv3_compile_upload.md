@@ -74,6 +74,24 @@ Example: `python3 upload.py motor`
 2. The new compiled firmware is flashed onto the microcontroller at the appropriate memory address
     - Windows Users: even though this command is invoked in WSL, the command is actually run in Windows
 
+# Uploading Over Radio (Work in Progress)
+
+This is currently a work in progress feature designed for a laptop to send firmware over radio, through a host board, and over CAN to the intended target board.
+
+**Uploading Process**
+
+1. Open the *Rivanna3S* folder.
+2. In the *Rivanna3S* folder, run the **new** upload script `transmit_stm.py`.
+
+Arguments:
+- `board`: positional, required argument. Identifes the intended destination board to flash to
+- `-f`, `--file`: optional. Selects the firmware file to transmit. Defaults to the selected board’s .bin file in build/bin/.
+- `-p`, `--port`: optional. Specifies the serial port, such as /dev/ttyACM0. ST-Link is automatically detected when omitted.
+- `--baud`: optional. Sets the baud rate; defaults to 115200 and must match the receiver.
+- `--native`: optional. Forces native Linux serial communication when running in WSL.
+
+Example: `python3 transmit_stm.py topdist`
+
 # Monitoring
 
 A serial monitor, such as `monitor.py`, can be used to read debug log statements from the microcontrollers. 
