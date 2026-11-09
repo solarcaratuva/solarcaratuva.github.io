@@ -78,6 +78,12 @@ Example: `python3 upload.py motor`
 
 This is currently a work in progress feature designed for a laptop to send firmware over radio, through a host board, and over CAN to the intended target board.
 
+The connected host must first have MotorBoard or TopDistBoard firmware built with --mock installed through the existing SWD upload process. The firmware file to transmit must already be compiled.
+
+**Prerequisites** 
+
+Follow the Compiling setup and Uploading software installation instructions listed in the previous sections.
+
 **Uploading Process**
 
 1. Open the *Rivanna3S* folder.
@@ -91,6 +97,15 @@ Arguments:
 - `--native`: optional. Forces native Linux serial communication when running in WSL.
 
 Example: `python3 transmit_stm.py topdist`
+
+**Board-to-board delivery is mocked as of now and is not functional.**
+
+**What is Actually Happening**
+
+1. The laptop tells the host board the intended target board, file size, and CRC.
+2. The host recieves 64-byte chuncks of data and verifies proper reception.
+3. TODO (target board recieves and verifies the incoming data, currently mock testing).
+4. The script reports a success or failure.
 
 # Monitoring
 
